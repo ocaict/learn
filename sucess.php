@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Cache-control" content="no-cache"><meta http-equiv="Cache-control" content="no-cache">
+<meta charset="utf-8">
+<title>Message sent sucessfully</title>
+<meta name="author" content="Oluegwu Chigozie">
+<meta name="categories" content="EducationEducation">
+<meta name="generator" content="OCA ICT CENTRE">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="icon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="Graduation_Cap_with_Diploma_PNG_Clipart-375.png" rel="apple-touch-icon" sizes="250x166">
+<link href="base/jquery-ui.min.css" rel="stylesheet">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="Oca_Web_Site_git.css" rel="stylesheet">
+<link href="sucess.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="wb.newsviewer.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="transition.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutSine');
+   });
+   $(document).on('click','.ThemeableMenu1-navbar-collapse.in',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   var NewsFeedTicker1_Data = new Array();
+   NewsFeedTicker1_Data[0] = ["http://", "Website Design", "", ""];
+   NewsFeedTicker1_Data[1] = ["http://", "Instructional Design and elearning Development", "", ""];
+   NewsFeedTicker1_Data[2] = ["http://", "Mobile learning", "", ""];
+   NewsFeedTicker1_Data[3] = ["http://", "Intensive ICT Training", "", ""];
+   $("#NewsFeedTicker1").newsviewer({ mode: 'rotate', pause: 2000, pause: 2000, animation: 4, animationDuration: 500, sortOrder: 0, dataSource: 'local', param: NewsFeedTicker1_Data, target: '_self', includeDate: false, maxItems: 10});
+   $("#ThemeableButton2").button();
+   $("a[href*='#links']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_links').offset().top }, 600, 'easeOutSine');
+   });
+});
+</script>
+</head>
+<body>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image3" style="display:inline-block;width:46px;height:26px;z-index:0;">
+<a href="./index.html"><img src="images/o2.png" id="Image3" alt=""></a>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_ThemeableMenu1" style="display:inline-block;width:100%;z-index:1001;">
+<div id="ThemeableMenu1" class="ThemeableMenu1" style ="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu1-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="ThemeableMenu1-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="">
+<a href="./index.html">Home</a>
+</li>
+<li class="">
+<a href="./services.html">Services</a>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="./About-Services.html">Services</a></li>
+<li><a href="./Contact-Us.html">Contact Us</a></li>
+</ul>
+</li>
+<li class="">
+<a href="./Comprenhensive-ICT-Training.html">ICT Training</a>
+</li>
+<li class="">
+<a href="./tutorials.html">Tutrials</a>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="./Samples.html">Samples</a></li>
+<li><a href="./eLearning-Examples.html">Download</a></li>
+</ul>
+</li>
+<li class="">
+<a href="./Contact-Us.html">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid6">
+<div id="LayoutGrid6-overlay"></div>
+<div id="LayoutGrid6">
+<div class="row">
+<div class="col-1">
+<div id="NewsFeedTicker1" style="overflow:hidden;height:84px;z-index:4;">
+</div>
+<div id="wb_LayoutGrid12">
+<div id="LayoutGrid12">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text2">
+<span style="color:#FFFFFF;font-family:Montserrat;font-size:19px;line-height:29px;">Hello $name! Your Message has been successfully Delivered.<br>We will get in touch with you as soon as possible</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+<div id="wb_ThemeableButton2" style="display:inline-block;width:100%;z-index:3;">
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton2" href="./index.html" id="ThemeableButton2" style="width:100%;height:100%;">Continue Browsing</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:8;">
+<h2 id="Heading2">Develop website without coding</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1-overlay"></div>
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<hr id="Line1" style="display:none;width: 100%;z-index:20;">
+<div id="wb_links">
+<div id="links">
+<div class="row">
+<div class="col-1">
+<div id="wb_linksText1">
+<span style="color:#FFFFFF;"><strong>Rapid Solutions</strong></span>
+</div>
+<div id="wb_linksMenu1" style="display:inline-block;width:100%;z-index:11;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="#" target="_self">Instructional&nbsp;Design</a>
+</li>
+<li><a role="menuitem" href="#" target="_self">Website&nbsp;Design</a>
+</li>
+<li><a role="menuitem" href="./Lectora-Inspire.html" target="_self">ICT&nbsp;Training</a>
+</li>
+<li><a role="menuitem" href="./explore.html" target="_self">ILT&nbsp;to&nbsp;eLearning&nbsp;Conversion</a>
+</li>
+<li><a role="menuitem" href="./Mobile-App-Development.html" target="_self">Mobile&nbsp;eLearning</a>
+</li>
+<li><a role="menuitem" href="./Lms-Training.html" target="_self">LMS&nbsp;Solutions</a>
+</li>
+<li><a role="menuitem" href="./explore.html" target="_self">Blended&nbsp;Learning</a>
+</li>
+<li><a role="menuitem" href="./eLearning-Apps.html" target="_self">Micro&nbsp;Learning</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_linksText2">
+<span style="color:#FFFFFF;"><strong>Authoring Expertise</strong></span>
+</div>
+<div id="wb_linksMenu2" style="display:inline-block;width:100%;z-index:13;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="./adobe-captivate.html" target="_self">Adobe&nbsp;Captivate</a>
+</li>
+<li><a role="menuitem" href="./Articulate-Storyline.html" target="_self">Articulate&nbsp;Storyline</a>
+</li>
+<li><a role="menuitem" href="#" target="_self">Lectora&nbsp;Inspire</a>
+</li>
+<li><a role="menuitem" href="#" target="_self">Ispring</a>
+</li>
+<li><a role="menuitem" href="#" target="_self">Powerpoint</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_linksText3">
+<span style="color:#FFFFFF;"><strong>Contacts</strong></span>
+</div>
+<div id="wb_linksMenu3" style="display:inline-block;width:100%;z-index:15;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="#" target="_self">Blogs</a>
+</li>
+<li><a role="menuitem" href="./About-Services.html" target="_self">About</a>
+</li>
+<li><a role="menuitem" href="./explore.html" target="_self">People</a>
+</li>
+<li><a role="menuitem" href="./error.html" target="_self">Contact&nbsp;Us</a>
+</li>
+</ul>
+
+</div>
+<div id="wb_Text1">
+<p style="font-size:15px;line-height:17.5px;color:#FFFFFF;"><span style="font-weight:bold;">Address:</span></p>
+<p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">No 2, Jang Gwom St. Opp UEC </p>
+<p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">Behind Gada Biu Police Outstation,</p>
+<p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">Jos Plateau State.</p>
+<p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">Phone: 08165321429</p>
+</div>
+<div id="wb_linksIcon3" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:17;">
+<a href="mailto:ocaictcentre@gmail.com"><div id="linksIcon3"><i class="fa fa-envelope-o"></i></div></a>
+</div>
+<div id="wb_linksIcon1" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:18;">
+<a href="https://web.facebook.com/Oca-Ict-Centre-111896920269069/" target="_blank"><div id="linksIcon1"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_linksIcon4" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:19;">
+<a href="https://www.youtube.com/channel/UCZ6ZasPc2Pw4oV8-bxS0RuA/featured" target="_blank"><div id="linksIcon4"><i class="fa fa-youtube-square"></i></div></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_footerText">
+<span style="color:#FFFFFF;font-family:Montserrat;font-size:13px;">Copyright © 2020-OCA ICT CENTRE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--Start of Tawk.to Script-->
+<script>
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e134ae927773e0d832c1a57/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script--><!--Start of Tawk.to Script-->
+<script>
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e134ae927773e0d832c1a57/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script--></body>
+</html>

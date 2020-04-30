@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Cache-control" content="no-cache"><meta http-equiv="Cache-control" content="no-cache">
+<meta charset="utf-8">
+<title>LMS - Learning Management System Intergration & Training</title>
+<meta name="author" content="Oluegwu Chigozie">
+<meta name="categories" content="EducationEducation">
+<meta name="generator" content="OCA ICT CENTRE">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="icon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="Graduation_Cap_with_Diploma_PNG_Clipart-375.png" rel="apple-touch-icon" sizes="250x166">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="Oca_Web_Site_git.css" rel="stylesheet">
+<link href="Lms-Training.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="wb.newsviewer.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="transition.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<script src="wwb15.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#wb_Heading2').addClass('visibility-hidden');
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutSine');
+   });
+   $(document).on('click','.ThemeableMenu1-navbar-collapse.in',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   var NewsFeedTicker1_Data = new Array();
+   NewsFeedTicker1_Data[0] = ["http://", "Website Design", "", ""];
+   NewsFeedTicker1_Data[1] = ["http://", "Instructional Design and elearning Development", "", ""];
+   NewsFeedTicker1_Data[2] = ["http://", "Mobile learning", "", ""];
+   NewsFeedTicker1_Data[3] = ["http://", "Intensive ICT Training", "", ""];
+   $("#NewsFeedTicker1").newsviewer({ mode: 'rotate', pause: 2000, pause: 2000, animation: 4, animationDuration: 500, sortOrder: 0, dataSource: 'local', param: NewsFeedTicker1_Data, target: '_self', includeDate: false, maxItems: 10});
+   function onScrollHeading3()
+   {
+      var $obj = $("#wb_Heading3");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_Heading2', 'vanish-in', 100, 1000);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_Heading2', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_Heading3').inViewPort(true))
+   {
+      $('#wb_Heading3').addClass("in-viewport");
+   }
+   onScrollHeading3();
+   $(window).scroll(function(event)
+   {
+      onScrollHeading3();
+   });
+   $("a[href*='#links']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_links').offset().top }, 600, 'easeOutSine');
+   });
+});
+</script>
+<!-- Insert Google Analytics code here -->
+</head>
+<body>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image3">
+<a href="./index.html"><img src="images/o2.png" id="Image3" alt=""></a>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_ThemeableMenu1">
+<div id="ThemeableMenu1" class="ThemeableMenu1" style ="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu1-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="ThemeableMenu1-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="">
+<a href="./index.html">Home</a>
+</li>
+<li class="">
+<a href="./services.html">Services</a>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="./About-Services.html">Services</a></li>
+<li><a href="./Contact-Us.html">Contact Us</a></li>
+</ul>
+</li>
+<li class="">
+<a href="./Comprenhensive-ICT-Training.html">ICT Training</a>
+</li>
+<li class="">
+<a href="./tutorials.html">Tutrials</a>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="./Samples.html">Samples</a></li>
+<li><a href="./eLearning-Examples.html">Download</a></li>
+</ul>
+</li>
+<li class="">
+<a href="./Contact-Us.html">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid6">
+<div id="LayoutGrid6-overlay"></div>
+<div id="LayoutGrid6">
+<div class="row">
+<div class="col-1">
+<div id="NewsFeedTicker1">
+</div>
+<div id="wb_Heading1">
+<h2 id="Heading1">Learning Management System Intergration and Training</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2">
+<h2 id="Heading2">What is LMS?</h2>
+</div>
+<div id="wb_Text5">
+<span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:29px;">A learning management system (LMS) is a software application for the administration, documentation, tracking, reporting, and delivery of educational courses, training programs, or learning and development programs.The learning management system concept emerged directly from e-Learning. </span><span style="color:#4F4F4F;font-family:Tahoma;font-size:19px;line-height:22px;"><br></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text2">
+<span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:26px;"><strong>Understanding the concept of LMS</strong><br>A Learning Management System (LMS) is a software-based platform that facilitates the management, delivery, and measurement of an organization’s corporate e-learning programs.<br><br>The Learning Management System has become an incredibly powerful tool for organizations looking to improve the performance and retention of its workforce. Most learning management systems are cloud-based software solutions that companies use as the foundation of their corporate training programs. Similar to how sales teams depend on CRM software, or HR teams use HRIS software, the LMS is an organization’s core technology used by its Learning and Development (L&amp;D) department.</span>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Image5">
+<img src="oca elearning.jpeg" id="Image5" alt="">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid11">
+<div id="LayoutGrid11">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading5">
+<h2 id="Heading5">Who uses LMS?</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid10">
+<div id="LayoutGrid10">
+<div class="col-1">
+<div id="wb_Text3">
+<span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:24px;">LMSs are used globally, across multiple different industries and for a variety of different corporate learning use cases. LMS adoption has been on the rise for the past several years all around the world. <br><br></span><span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:23px;"><strong>There are two key types of LMS users:</strong><br><br><strong>Learners: </strong>They’re on the receiving end of corporate training (after all, they are to whom training programs are intended). Learners who have access to the corporate LMS will be able to see their course catalog, complete assigned courses and any evaluations, and measure their own progress. Learners can be assigned training on an individual basis, or according to their job function, and/or role in a company’s organizational structure.<br><br><strong>Administrators: </strong>Administrators are on the opposite side of learning technology spectrum. They’re responsible for managing the LMS, which involves a combination of multiple tasks, including creating courses and learning plans, assigning specific learner groups to specific learning plans and tracking their learners’ progress.<br></span>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Image1">
+<img src="images/mary.png" id="Image1" alt="">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading3">
+<h2 id="Heading3">LMS Customer Types</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid7">
+<div id="LayoutGrid7">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image6">
+<img src="images/webinar-concept-with-man-desk_23-2147765647.jpg" id="Image6" alt="">
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Text4">
+<h3>Large Enterprises: </h3><span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:27px;">Large companies are leaning on Learning Management Systems to gauge the performance and professional development of hundreds or even thousands of employees, while deploying global online training initiatives. Some large organizations may also use extended enterprise features of their LMS to keep franchisees, suppliers and external sales channels in the loop on product releases, compliance requirements, etc.<br></span><span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:24px;"><br><br></span><h3>Small- </h3><span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:26px;">and Medium-sized Business (SMBs): These organizations benefit from a Learning Management System by utilizing fewer human resources, and instead lean on technology tools to scale the growth of their employees with the growth of the business (and adapt to constantly changing training needs that reflect that organizational growth).<br></span><span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:27px;"><br></span><h3>Freelancers: </h3><span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:27px;">LMS platforms designed for e-learning freelancers who work with multiple clients and need to deliver a diverse range of deliverables. These Learning Management Systems may feature built-in collaboration tools, which allow you to fly solo or work with a remote e-learning team.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid8">
+<div id="LayoutGrid8">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading4">
+<h2 id="Heading4">What is an LMS Used For?</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid9">
+<div id="LayoutGrid9">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image4">
+<img src="images/img0005.jpg" id="Image4" alt="https://unsplash.com/@youxventures" title="https://unsplash.com/@youxventures">
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Text6">
+<span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:26px;">Employee Training: Perhaps the most common LMS use case is to support the training and development of internal employees. Within the LMS, courses can be assigned to ensure employees acquire the right job skills, are informed about product changes, are up-to-date on compliance training, etc.<br><br>Customer Training: Another common LMS use case is for organizations to provide training to customers. This is especially common for software and technology companies who need to effectively onboard users so they can use their product effectively. Ongoing customer training will also provide more value to customers and prevent customer churn.<br><br>Partner Training: An LMS can also be leveraged to train an organization’s partners and channels (e.g., resellers). This is a great way to enhance your partnership programs and provide more value to partners.<br></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid12">
+<div id="LayoutGrid12">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading6">
+<h2 id="Heading6">What are the advantages of an LMS?</h2>
+</div>
+<div id="wb_Text7">
+<h3>An LMS can help businesses:</h3>
+<p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">&nbsp;</p>
+<ul style="font-family:Montserrat;font-size:19px;line-height:22.5px;color:#4F4F4F;list-style-type:decimal;">
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Reduce learning and development costs
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Cut down training/onboarding time for employees, customers, and partners
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Accommodate multiple learning audiences
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Centralize e-learning resources
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Easy adaptation and re-use of learning materials over time
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Maintain compliance
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Track learner progress
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Onboard partners and resellers to improve their ability to sell
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Retain customers by ensuring they use their products and services effectively
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Measure how learning impacts organizational performance
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">More choices for curriculum creators (i.e., methods of delivery, design of materials, evaluation techniques)
+</li>
+<li style="margin:0 0 0 24px;"><p style="margin:0px 0px 0px 17.33px;font-family:Montserrat;font-size:19px;line-height:22.5px;">Economies of scale that make it cost efficient for organizations to develop and maintain learning content (instead of relying on third party providers)
+<p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">&nbsp;
+<p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">&nbsp;
+<h3>Benefits for Learners:</h3>
+<p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">&nbsp;
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Increase knowledge retention
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Stay on top of required training
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Engage with formal and informal learning best practices
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Acquire skills and knowledge required for career advancement
+</li>
+<li style="margin:0 0 0 24px;"><p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">Improve performance
+</li>
+</ul>
+<p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">&nbsp;</p>
+<p style="font-family:Montserrat;font-size:19px;line-height:22.5px;">&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1-overlay"></div>
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<hr id="Line1">
+<div id="wb_links">
+<div id="links">
+<div class="row">
+<div class="col-1">
+<div id="wb_linksText1">
+<span style="color:#FFFFFF;"><strong>Rapid Solutions</strong></span>
+</div>
+<div id="wb_linksMenu1">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="#" target="_self">Instructional&nbsp;Design</a>
+</li>
+<li><a role="menuitem" href="#" target="_self">Website&nbsp;Design</a>
+</li>
+<li><a role="menuitem" href="./Lectora-Inspire.html" target="_self">ICT&nbsp;Training</a>
+</li>
+<li><a role="menuitem" href="./explore.html" target="_self">ILT&nbsp;to&nbsp;eLearning&nbsp;Conversion</a>
+</li>
+<li><a role="menuitem" href="./Mobile-App-Development.html" target="_self">Mobile&nbsp;eLearning</a>
+</li>
+<li><a role="menuitem" href="./Lms-Training.html" target="_self">LMS&nbsp;Solutions</a>
+</li>
+<li><a role="menuitem" href="./explore.html" target="_self">Blended&nbsp;Learning</a>
+</li>
+<li><a role="menuitem" href="./eLearning-Apps.html" target="_self">Micro&nbsp;Learning</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_linksText2">
+<span style="color:#FFFFFF;"><strong>Authoring Expertise</strong></span>
+</div>
+<div id="wb_linksMenu2">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="./adobe-captivate.html" target="_self">Adobe&nbsp;Captivate</a>
+</li>
+<li><a role="menuitem" href="./Articulate-Storyline.html" target="_self">Articulate&nbsp;Storyline</a>
+</li>
+<li><a role="menuitem" href="#" target="_self">Lectora&nbsp;Inspire</a>
+</li>
+<li><a role="menuitem" href="#" target="_self">Ispring</a>
+</li>
+<li><a role="menuitem" href="#" target="_self">Powerpoint</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_linksText3">
+<span style="color:#FFFFFF;"><strong>Contacts</strong></span>
+</div>
+<div id="wb_linksMenu3">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="#" target="_self">Blogs</a>
+</li>
+<li><a role="menuitem" href="./About-Services.html" target="_self">About</a>
+</li>
+<li><a role="menuitem" href="./explore.html" target="_self">People</a>
+</li>
+<li><a role="menuitem" href="./error.html" target="_self">Contact&nbsp;Us</a>
+</li>
+</ul>
+
+</div>
+<div id="wb_Text1">
+<p style="font-size:15px;line-height:17.5px;color:#FFFFFF;"><span style="font-weight:bold;">Address:</span></p>
+<p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">No 2, Jang Gwom St. Opp UEC </p>
+<p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">Behind Gada Biu Police Outstation,</p>
+<p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">Jos Plateau State.</p>
+<p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">Phone: 08165321429</p>
+</div>
+<div id="wb_linksIcon3">
+<a href="mailto:ocaictcentre@gmail.com"><div id="linksIcon3"><i class="fa fa-envelope-o"></i></div></a>
+</div>
+<div id="wb_linksIcon1">
+<a href="https://web.facebook.com/Oca-Ict-Centre-111896920269069/" target="_blank"><div id="linksIcon1"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_linksIcon4">
+<a href="https://www.youtube.com/channel/UCZ6ZasPc2Pw4oV8-bxS0RuA/featured" target="_blank"><div id="linksIcon4"><i class="fa fa-youtube-square"></i></div></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_footerText">
+<span style="color:#FFFFFF;font-family:Montserrat;font-size:13px;">Copyright © 2020-OCA ICT CENTRE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--Start of Tawk.to Script-->
+<script>
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e134ae927773e0d832c1a57/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script--><!--Start of Tawk.to Script-->
+<script>
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e134ae927773e0d832c1a57/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script--></body>
+</html>
