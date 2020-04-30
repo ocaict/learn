@@ -1,0 +1,900 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Cache-control" content="no-cache"><meta http-equiv="Cache-control" content="no-cache">
+<meta charset="utf-8">
+<title>OCA ICT -Educational Resources Technology - Master of Authoring Tools</title>
+<meta name="description" content="We mastered all popular authoring tools - Adobe Captivate, Articulate Storyline, Lectora Inspire and many more whichever authoring tool you decide to use , we make it dance to your tune">
+<meta name="keywords" content="Computer Training,OCA ICT CENTRE,Captivate Training,Computer Institute in Jos, Computer Institute in Nigeria, Elearning Development,Oluegwu Chigozie, Authoring Software, eLearning Solution">
+<meta name="author" content="Oluegwu Chigozie">
+<meta name="categories" content="EducationEducation">
+<meta name="generator" content="OCA ICT CENTRE">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="icon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="Graduation_Cap_with_Diploma_PNG_Clipart-375.png" rel="apple-touch-icon" sizes="250x166">
+<link href="base/jquery-ui.min.css" rel="stylesheet">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="Oca_Web_Site_git.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="wb.newsviewer.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.parallax.min.js"></script>
+<script src="wb.lazyload.min.js"></script>
+<script src="util.min.js"></script>
+<script src="carousel.min.js"></script>
+<script src="transition.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<script src="wwb15.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#wb_Heading2').addClass('visibility-hidden');
+   $('#serives').addClass('visibility-hidden');
+   $('#serives').addClass('visibility-hidden');
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutSine');
+   });
+   $(document).on('click','.ThemeableMenu1-navbar-collapse.in',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   var NewsFeedTicker2_Data = new Array();
+   NewsFeedTicker2_Data[0] = ["http://", "Website Design", "", ""];
+   NewsFeedTicker2_Data[1] = ["http://", "Instructional Design", "", ""];
+   NewsFeedTicker2_Data[2] = ["http://", "Mobile learning", "", ""];
+   NewsFeedTicker2_Data[3] = ["http://", "Intensive ICT Training", "", ""];
+   NewsFeedTicker2_Data[4] = ["http://", "LMS Training", "", ""];
+   NewsFeedTicker2_Data[5] = ["http://", "eLearning Development", "", ""];
+   NewsFeedTicker2_Data[6] = ["http://", "ILT to eLearning", "", ""];
+   $("#NewsFeedTicker2").newsviewer({ mode: 'rotate', pause: 2000, pause: 2000, animation: 4, animationDuration: 500, sortOrder: 0, dataSource: 'local', param: NewsFeedTicker2_Data, target: '_self', includeDate: false, maxItems: 10});
+   $("a[href*='#Top_Bar']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_Top_Bar').offset().top }, 600, 'linear');
+   });
+   $("#header_btn_right").button();
+   $('#wb_LayoutGrid6').parallax();
+   $('#wb_LayoutGrid19').parallax();
+   $("#Download_Android_Btn").button();
+   $("#Download_Desktop_Btn").button();
+   function onScrollHeading17()
+   {
+      var $obj = $("#wb_Heading17");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_Heading2', 'vanish-in', 100, 1000);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_Heading2', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_Heading17').inViewPort(true))
+   {
+      $('#wb_Heading17').addClass("in-viewport");
+   }
+   onScrollHeading17();
+   $(window).scroll(function(event)
+   {
+      onScrollHeading17();
+   });
+   $("#ThemeableButton6").button();
+   $("#ThemeableButton7").button();
+   $("#ThemeableButton8").button();
+   $("#ThemeableButton1").button();
+   function onScrollHeading4()
+   {
+      var $obj = $("#wb_Heading4");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('serives', 'vanish-in', 100, 1000);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('serives', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_Heading4').inViewPort(true))
+   {
+      $('#wb_Heading4').addClass("in-viewport");
+   }
+   onScrollHeading4();
+   $(window).scroll(function(event)
+   {
+      onScrollHeading4();
+   });
+   function onScrollHeading1()
+   {
+      var $obj = $("#wb_Heading1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('serives', 'vanish-in', 100, 1000);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('serives', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_Heading1').inViewPort(true))
+   {
+      $('#wb_Heading1').addClass("in-viewport");
+   }
+   onScrollHeading1();
+   $(window).scroll(function(event)
+   {
+      onScrollHeading1();
+   });
+   $("a[href*='#links']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_links').offset().top }, 600, 'easeOutSine');
+   });
+   $('img[data-src]').lazyload();
+});
+</script>
+<script>
+$(document).ready(function()
+{
+   var $countup = $('#count-up h1');
+   
+   $countup.each(function() 
+   {
+     var $obj = $(this);
+     $obj.data('value', parseInt($obj.html()));
+     $obj.data('done', false);
+     $obj.html('0');
+   });
+   $(window).bind('scroll', function() 
+   {
+      $countup.each(function() 
+      {
+         var $obj = $(this);
+         if (!$obj.data('done') && $(window).scrollTop() + $(window).height() >= $obj.offset().top) 
+         {
+            $obj.data('done', true);
+            $obj.animate({scroll: 1}, 
+            { 
+               duration: 3000, 
+               step: function(now) 
+               {
+                  var $obj = $(this);
+                  var val = Math.round($obj.data('value') * now);
+                  $obj.html(val);
+               }
+            });
+         }
+      });
+   }).triggerHandler('scroll');
+});
+</script>
+</head>
+<body>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image3" style="display:inline-block;width:46px;height:26px;z-index:0;">
+<a href="./index.html"><img src="images/o2.png" id="Image3" alt=""></a>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_ThemeableMenu1" style="display:inline-block;width:100%;z-index:1001;">
+<div id="ThemeableMenu1" class="ThemeableMenu1" style ="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu1-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="ThemeableMenu1-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="">
+<a href="./index.html">Home</a>
+</li>
+<li class="">
+<a href="./services.html">Services</a>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="./About-Services.html">Services</a></li>
+<li><a href="./Contact-Us.html">Contact Us</a></li>
+</ul>
+</li>
+<li class="">
+<a href="./Comprenhensive-ICT-Training.html">ICT Training</a>
+</li>
+<li class="">
+<a href="./tutorials.html">Tutrials</a>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="./Samples.html">Samples</a></li>
+<li><a href="./eLearning-Examples.html">Download</a></li>
+</ul>
+</li>
+<li class="">
+<a href="./Contact-Us.html">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_Top_Bar">
+<div id="Top_Bar-overlay"></div>
+<div id="Top_Bar">
+<div class="row">
+<div class="col-1">
+<div id="NewsFeedTicker2" style="overflow:hidden;height:84px;z-index:7;">
+</div>
+<div id="wb_Hide_Header">
+<div id="Hide_Header">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading4" style="display:inline-block;width:100%;z-index:4;">
+<h2 id="Heading4">eLearning Course Development | Website Design & ICT Training</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_Header_Btn_Holder">
+<div id="Header_Btn_Holder">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_header_btn_right" style="display:inline-block;width:100%;z-index:5;">
+<a class="ui-button ui-widget ui-corner-all" id="header_btn_right" href="./services.html" id="header_btn_right" onmouseover="AnimateCss('wb_header_btn_right', 'push', 0, 500);return false;" style="width:100%;height:100%;">Get Started</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid13">
+<div id="LayoutGrid13">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:6;">
+<h2 id="Heading2">We mastered all popular authoring tools - Adobe Captivate, Articulate Storyline, Lectora Inspire and many more whichever authoring tool you decide to use , we make it dance to your tune</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_Service_Carousel">
+<div id="Service_Carousel">
+<div class="row">
+<div class="col-1">
+<div id="Service_Blog" class="carousel slide" data-interval="5000" data-ride="carousel" style="overflow:hidden;">
+<ol class="carousel-indicators">
+<li data-target="#Service_Blog" data-slide-to="0" class="active"></li>
+<li data-target="#Service_Blog" data-slide-to="1"></li>
+<li data-target="#Service_Blog" data-slide-to="2"></li>
+<li data-target="#Service_Blog" data-slide-to="3"></li>
+</ol>
+<div class="carousel-inner">
+<div class="blogitem carousel-item active" style="background-image:url(images/s1.jpg)">
+   <h3 class="blogsubject"></h3>
+   <p class="blogtext"><span style="color:#FFFFFF;">eLearning Development &amp; Depolyment</span></p>
+   <p><span class="blogcomments"> <a href=""></a></span> <span class="blogdate"><br></span></p>
+   <p><a class="blogbutton" href="http://">Read more</a></p>
+</div>
+<div class="clearfix visible-col1"></div>
+<div class="blogitem carousel-item" style="background-image:url(images/s2.jpg)">
+   <h3 class="blogsubject"></h3>
+   <p class="blogtext"><span style="color:#FF8C00;">Comprehensive ICT Training</span></p>
+   <p><span class="blogcomments"> <a href=""></a></span> <span class="blogdate"><br></span></p>
+   <p><a class="blogbutton" href="">Read more</a></p>
+</div>
+<div class="clearfix visible-col1"></div>
+<div class="blogitem carousel-item" style="background-image:url(images/s3.jpg)">
+   <h3 class="blogsubject"></h3>
+   <p class="blogtext"><span style="color:#000000;">Instructional Design</span></p>
+   <p><span class="blogcomments"> <a href=""></a></span> <span class="blogdate"><br></span></p>
+   <p><a class="blogbutton" href="">Read more</a></p>
+</div>
+<div class="clearfix visible-col1"></div>
+<div class="blogitem carousel-item" style="background-image:url(images/s4.jpg)">
+   <h3 class="blogsubject"></h3>
+   <p class="blogtext"><span style="color:#000000;">Responsive Website Design</span></p>
+   <p><span class="blogcomments"> <a href=""></a></span> <span class="blogdate"><br></span></p>
+   <p><a class="blogbutton" href="">Read more</a></p>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<a class="carousel-item-left carousel-control" href="#Service_Blog" role="button" data-slide="prev">
+<span class="icon-prev" aria-hidden="true"></span>
+</a>
+<a class="carousel-item-right carousel-control" href="#Service_Blog" role="button" data-slide="next">
+<span class="icon-next" aria-hidden="true"></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:13;">
+<h2 id="Heading1">Our Services</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_HomeCaed_Container">
+<div id="HomeCaed_Container">
+<div id="wb_Website_Card" style="display:flex;text-align:center;z-index:14;">
+   <div id="Website_Card-card-body">
+      <div style="overflow:hidden"><img id="Website_Card-card-item0" src="images/icons8_internet_128px.png" alt="" title=""></div>
+      <div id="Website_Card-card-item1"><h2>Website Design</h2></div>
+      <hr id="Website_Card-card-item2">
+      <div id="Website_Card-card-item3">We develop world standard  and fully responsive websites which means you can view it with any modern devices.<br>We create different kinds of websites be it educational, ecommerce, news,and any other website you may think of.</div>
+      <hr id="Website_Card-card-item4">
+      <div id="Website_Card-card-item5"><a href="./website-design.html">Learn More</a></div>
+   </div>
+
+</div>
+<div id="wb_Ict_Training_Card" style="display:flex;text-align:center;z-index:15;">
+   <div id="Ict_Training_Card-card-body">
+      <img id="Ict_Training_Card-card-item0" src="images/icons8_training_480px.png" alt="" title="">
+      <div id="Ict_Training_Card-card-item1"><h2>ICT Training</h2></div>
+      <hr id="Ict_Training_Card-card-item2">
+      <div id="Ict_Training_Card-card-item3">We conduct intensive ICT Training on all the major Authoring Tools (Adobe Captivate, Articulate Storyline, Lectora Inspire), Intensive Website Design Training (Various types of website), LMS Training (e.g Moodle) and other computer Certificate Programs.</div>
+      <hr id="Ict_Training_Card-card-item4">
+      <div id="Ict_Training_Card-card-item5"><a href="./Comprenhensive-ICT-Training.html">Get Started</a></div>
+   </div>
+
+</div>
+<div id="wb_eLearning_Dev_Card" style="display:flex;text-align:center;z-index:16;">
+   <div id="eLearning_Dev_Card-card-body">
+      <img id="eLearning_Dev_Card-card-item0" src="images/icons8_learning_480px.png" alt="" title="">
+      <div id="eLearning_Dev_Card-card-item1"><h2>eLearning Development</h2></div>
+      <hr id="eLearning_Dev_Card-card-item2">
+      <div id="eLearning_Dev_Card-card-item3">We create, design and deploy educational and isntructional learning materials, industry standard inductional materials, Self-Paced and Blended Courses etc. All contents we develop can be deploy to websites, LMS, Mobile  and Desktop apps which can be acceed offline.</div>
+      <hr id="eLearning_Dev_Card-card-item4">
+      <div id="eLearning_Dev_Card-card-item5"><a href="./instructional-design.html">Learn More</a></div>
+   </div>
+
+</div>
+<div id="wb_Deployment_Card" style="display:flex;text-align:center;z-index:17;">
+   <div id="Deployment_Card-card-body">
+      <img id="Deployment_Card-card-item0" src="images/icons8_multiple_smartphones_480px.png" alt="" title="">
+      <div id="Deployment_Card-card-item1"><h2>Deployment</h2></div>
+      <hr id="Deployment_Card-card-item2">
+      <div id="Deployment_Card-card-item3"><br>We create mobile elearning materials such as interactive elearning games, mobile couress, instructional contents and industry standard training apps etc. all of which can be fully accessed offline.<br></div>
+      <hr id="Deployment_Card-card-item4">
+      <div id="Deployment_Card-card-item5"><a href="./Mobile-App-Development.html">Learn More</a></div>
+   </div>
+
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid15">
+<div id="LayoutGrid15">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid17">
+<div id="LayoutGrid17-overlay"></div>
+<div id="LayoutGrid17">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading10" style="display:inline-block;width:100%;z-index:18;">
+<h3 id="Heading10">How we can help</h3>
+</div>
+<hr id="Line5" style="display:block;width: 100%;z-index:19;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_CardContainer1">
+<div id="CardContainer1-overlay"></div>
+<div id="CardContainer1">
+<div id="wb_Education_Institute_Card" style="display:flex;text-align:center;z-index:20;">
+   <div id="Education_Institute_Card-card-body">
+      <img id="Education_Institute_Card-card-item0" src="images/icons8_university_480px_1.png" alt="" title="">
+      <div id="Education_Institute_Card-card-item1">Educational Institutions</div>
+      <hr id="Education_Institute_Card-card-item2">
+      <div id="Education_Institute_Card-card-item3">Our services play major roles in educational institutions of all levels.<br>We create educational materials that can be deploy to LMS, websites or package as mobile and desktop application which can be accessed offline.<br>We train educational personnels on how to create Instructional contents, develop world standard courses, and also train student how to use LMS and other educational materials created for them.<br></div>
+   </div>
+
+</div>
+<div id="wb_Skill_Card" style="display:flex;text-align:center;z-index:21;">
+   <div id="Skill_Card-card-body">
+      <img id="Skill_Card-card-item0" src="images/adorable-blur-bookcase-261895.jpg" alt="" title="">
+      <div id="Skill_Card-card-item1"><h2>Acquire Skill</h2></div>
+      <hr id="Skill_Card-card-item2">
+      <div id="Skill_Card-card-item3">Many companies have started to depend upon computerised technology to get work done. Which is why computer skills have become increasingly important. Having the necessary and basic computer course knowledge will put you a step ahead of others. You’ll have a big advantage over those who aren’t computer literate.<br>Some of the skills you can acquire from us include Website Design, Instructional Design, eLearning Development, Word Proccessing, Cloud Computing, Computer Applications, etc.</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid6">
+<div id="LayoutGrid6-overlay"></div>
+<div id="LayoutGrid6">
+<div class="row">
+<div class="col-1">
+<div id="wb_LayoutGrid7">
+<div id="LayoutGrid7">
+<div class="row">
+<div class="col-1">
+<div id="wb_ThemeableButton1" style="display:inline-block;width:100%;z-index:22;">
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton1" href="./services.html" id="ThemeableButton1" style="width:100%;height:100%;">Discover More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid32">
+<div id="LayoutGrid32">
+<div class="row">
+<div class="col-1">
+<div id="wb_LayoutGrid29">
+<div id="LayoutGrid29">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading5" style="display:inline-block;width:100%;z-index:32;">
+<h2 id="Heading5">Our Mastery Solutions</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid21">
+<div id="LayoutGrid21">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image5" style="display:inline-block;width:100%;height:auto;z-index:33;">
+<img src="images/placeholder.gif" data-src="images/Master of Authoring.jpg" id="Image5" alt="">
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Text2">
+<span style="color:#000000;font-family:Montserrat;font-size:21px;"><strong>Our Mastery of Authoring Tools</strong></span>
+</div>
+<div id="wb_Text3">
+<span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:29px;"><br></span><span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:29px;">With many years of practices, reseach, OCA ICT CENTRE has literally mastered all popular authoring tools – Articulate (all versions including Articulate Rise), Lectora (all versions), Captivate (all versions), Camtasia and many more – and over the years, has developed hundreds of hours of eLearning using these tools.<br>We not only create elearning contents but also train personnel how to develop world standard and compliances training materials with these tools, we also deploy learning to any popular Learning Management System(LMS) or package Desktop and Mobile Stand Alone Application which learners can access offline with their devices.</span>
+</div>
+<div id="wb_ThemeableButton8" style="display:inline-block;width:100%;z-index:36;">
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton8" href="./instructional-design.html" target="_blank" id="ThemeableButton8" onclick="document.getElementById('Home_Screen').submit();return false;" style="width:100%;height:100%;">Discover More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid22">
+<div id="LayoutGrid22">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image1" style="display:inline-block;width:100%;height:auto;z-index:37;">
+<img src="images/placeholder.gif" data-src="images/Master of Website.jpg" id="Image1" alt="">
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Text4">
+<span style="color:#4F4F4F;font-family:Montserrat;font-size:21px;"><strong>Our Mastery of Website Design/ Development</strong></span>
+</div>
+<div id="wb_Text5">
+<span style="color:#000000;font-family:Montserrat;font-size:19px;line-height:29px;">With many years of experiences in web site design, we develop proffesional and fully responsive websites which means you can view it with any modern devices.<br>We create different kinds of websites be it educational, ecommerce, news, and any other website you may think of.<br>We aslo training individuals who want to acquire skills in web design using best CMS Tools such WordPress</span>
+</div>
+<div id="wb_ThemeableButton7" style="display:inline-block;width:100%;z-index:40;">
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton7" href="./website-design.html" target="_blank" id="ThemeableButton7" onclick="document.getElementById('Home_Screen').submit();return false;" style="width:100%;height:100%;">Discover More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading3" style="display:inline-block;width:100%;z-index:53;">
+<h2 id="Heading3">View Demo</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid26">
+<div id="LayoutGrid26">
+<div class="row">
+<div class="col-1">
+<iframe name="InlineFrame1" id="InlineFrame1" src="https://ocainfotech.ga/pwa/" scrolling="no"></iframe>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid18">
+<div id="LayoutGrid18-overlay"></div>
+<div id="LayoutGrid18">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading6" style="display:inline-block;width:100%;z-index:64;">
+<h2 id="Heading6">Free Download</h2>
+</div>
+<div id="wb_LayoutGrid8">
+<div id="LayoutGrid8-overlay"></div>
+<div id="LayoutGrid8">
+<div class="row">
+<div class="col-1">
+<div id="wb_App_Download_Image1" style="display:inline-block;width:100%;height:auto;z-index:55;">
+<img src="images/phone.png" id="App_Download_Image1" alt="">
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Download_Android_Text">
+<span style="color:#FFFFFF;font-family:Montserrat;font-size:21px;">Download Our App to Discover More (Android Only)</span>
+</div>
+<div id="wb_Download_Android_Btn" style="display:inline-block;width:100%;z-index:57;">
+<a class="ui-button ui-widget ui-corner-all" id="Download_Android_Btn" href="http://oca-ict.ga/apps/Oca_Services_Intro.apk" target="_blank" id="Download_Android_Btn" onclick="document.getElementById('Home_Screen').submit();return false;" style="width:100%;height:100%;">Download Now</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid34">
+<div id="LayoutGrid34">
+<div class="row">
+<div class="col-1">
+<hr id="Line2" style="display:block;width: 100%;z-index:58;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid25">
+<div id="LayoutGrid25">
+<div class="col-1">
+<div id="wb_App_Download_Image2" style="display:inline-block;width:100%;height:auto;z-index:59;">
+<img src="images/desktop.jpg" id="App_Download_Image2" alt="https://unsplash.com/@danielkorpai" title="https://unsplash.com/@danielkorpai">
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Text6">
+<span style="color:#FFFFFF;font-family:Montserrat;font-size:21px;">Desktop Version</span>
+</div>
+<div id="wb_Download_Desktop_Btn" style="display:inline-block;width:100%;z-index:61;">
+<a class="ui-button ui-widget ui-corner-all" id="Download_Desktop_Btn" href="http://oca-ict.ga/apps/desktop/Oca_Services_Intro.zip" target="_blank" id="Download_Desktop_Btn" onclick="document.getElementById('Home_Screen').submit();return false;" style="width:100%;height:100%;">Download Now</a>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid30">
+<div id="LayoutGrid30">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading17" style="display:inline-block;width:100%;z-index:62;">
+<h2 id="Heading17">We are open to build your school website too</h2>
+</div>
+<div id="wb_ThemeableButton6" style="display:inline-block;width:100%;z-index:63;">
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton6" href="./Contact-Us.html" target="_blank" id="ThemeableButton6" onclick="document.getElementById('Home_Screen').submit();return false;" style="width:100%;height:100%;">Get in Touch</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid28">
+<div id="LayoutGrid28">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-overlay"></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading11" style="display:inline-block;width:100%;z-index:85;">
+<h2 id="Heading11">Stats - Our Training Stats</h2>
+</div>
+<div id="wb_count-up">
+<div id="count-up">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_FontAwesomeIcon2" style="display:inline-block;width:64px;height:64px;text-align:center;z-index:69;">
+<svg id="FontAwesomeIcon2" height="100%" width="100%" style="position:absolute;height:100%;width:100%;left:0;top:0" viewBox="0 0 81 81" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(0.0452)">
+   <path transform="rotate(180) scale(-1,1) translate(0,-1536)" d="M1774 700l18 -316q4 -69 -82 -128t-235 -93.5t-323 -34.5t-323 34.5t-235 93.5t-82 128l18 316l574 -181q22 -7 48 -7t48 7zM2304 1024q0 -23 -22 -31l-1120 -352q-4 -1 -10 -1t-10 1l-652 206q-43 -34 -71 -111.5t-34 -178.5q63 -36 63 -109q0 -69 -58 -107l58 -433q2 -14 -8 -25q-9 -11 -24 -11h-192q-15 0 -24 11q-10 11 -8 25l58 433q-58 38 -58 107q0 73 65 111q11 207 98 330l-333 104q-22 8 -22 31t22 31l1120 352q4 1 10 1t10 -1l1120 -352q22 -8 22 -31z"/>
+   </g>
+</svg>
+
+</div>
+<div id="wb_Heading12" style="display:inline-block;width:100%;z-index:70;">
+<h1 id="Heading12">20</h1>
+</div>
+<div id="wb_Text14">
+<span style="color:#FFFFFF;font-family:Montserrat;font-size:19px;">Graduates</span>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_FontAwesomeIcon3" style="display:inline-block;width:64px;height:64px;text-align:center;z-index:72;">
+<svg id="FontAwesomeIcon3" height="100%" width="100%" style="position:absolute;height:100%;width:100%;left:0;top:0" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(0.0301)">
+   <path transform="rotate(180) scale(-1,1) translate(0,-1536)" d="M1201 752q47 -14 89.5 -38t89 -73t79.5 -115.5t55 -172t22 -236.5q0 -154 -100 -263.5t-241 -109.5h-854q-141 0 -241 109.5t-100 263.5q0 131 22 236.5t55 172t79.5 115.5t89 73t89.5 38q-79 125 -79 272q0 104 40.5 198.5t109.5 163.5t163.5 109.5t198.5 40.5t198.5 -40.5t163.5 -109.5t109.5 -163.5t40.5 -198.5q0 -147 -79 -272zM768 1408q-159 0 -271.5 -112.5t-112.5 -271.5t112.5 -271.5t271.5 -112.5t271.5 112.5t112.5 271.5t-112.5 271.5t-271.5 112.5zM1195 -128q88 0 150.5 71.5t62.5 173.5q0 239 -78.5 377t-225.5 145q-145 -127 -336 -127t-336 127q-147 -7 -225.5 -145t-78.5 -377q0 -102 62.5 -173.5t150.5 -71.5h854z"/>
+   </g>
+</svg>
+
+</div>
+<div id="wb_Heading13" style="display:inline-block;width:100%;z-index:73;">
+<h1 id="Heading13">10</h1>
+</div>
+<div id="wb_Text10">
+<span style="color:#FFFFFF;font-family:Montserrat;font-size:19px;">Developers</span>
+</div>
+</div>
+<div class="col-4">
+<div id="wb_FontAwesomeIcon4" style="display:inline-block;width:64px;height:64px;text-align:center;z-index:75;">
+<svg id="FontAwesomeIcon4" height="100%" width="100%" style="position:absolute;height:100%;width:100%;left:0;top:0" viewBox="0 0 67 67" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(0.0374)">
+   <path transform="rotate(180) scale(-1,1) translate(0,-1536)" d="M593 640q-162 -5 -265 -128h-134q-82 0 -138 40.5t-56 118.5q0 353 124 353q6 0 43.5 -21t97.5 -42.5t119 -21.5q67 0 133 23q-5 -37 -5 -66q0 -139 81 -256zM1664 3q0 -120 -73 -189.5t-194 -69.5h-874q-121 0 -194 69.5t-73 189.5q0 53 3.5 103.5t14 109t26.5 108.5t43 97.5t62 81t85.5 53.5t111.5 20q10 0 43 -21.5t73 -48t107 -48t135 -21.5t135 21.5t107 48t73 48t43 21.5q61 0 111.5 -20t85.5 -53.5t62 -81t43 -97.5t26.5 -108.5t14 -109t3.5 -103.5zM640 1280q0 -106 -75 -181t-181 -75t-181 75t-75 181t75 181t181 75t181 -75t75 -181zM1344 896q0 -159 -112.5 -271.5t-271.5 -112.5t-271.5 112.5t-112.5 271.5t112.5 271.5t271.5 112.5t271.5 -112.5t112.5 -271.5zM1920 671q0 -78 -56 -118.5t-138 -40.5h-134q-103 123 -265 128q81 117 81 256q0 29 -5 66q66 -23 133 -23q59 0 119 21.5t97.5 42.5t43.5 21q124 0 124 -353zM1792 1280q0 -106 -75 -181t-181 -75t-181 75t-75 181t75 181t181 75t181 -75t75 -181z"/>
+   </g>
+</svg>
+
+</div>
+<div id="wb_Heading14" style="display:inline-block;width:100%;z-index:76;">
+<h1 id="Heading14">50</h1>
+</div>
+<div id="wb_Text11">
+<span style="color:#FFFFFF;font-family:Montserrat;font-size:19px;">People Participating</span>
+</div>
+</div>
+<div class="col-5">
+<div id="wb_FontAwesomeIcon5" style="display:inline-block;width:64px;height:64px;text-align:center;z-index:78;">
+<svg id="FontAwesomeIcon5" height="100%" width="100%" style="position:absolute;height:100%;width:100%;left:0;top:0" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(0.0324)">
+   <path transform="rotate(180) scale(-1,1) translate(0,-1536)" d="M1639 1058q40 -57 18 -129l-275 -906q-19 -64 -76.5 -107.5t-122.5 -43.5h-923q-77 0 -148.5 53.5t-99.5 131.5q-24 67 -2 127q0 4 3 27t4 37q1 8 -3 21.5t-3 19.5q2 11 8 21t16.5 23.5t16.5 23.5q23 38 45 91.5t30 91.5q3 10 0.5 30t-0.5 28q3 11 17 28t17 23q21 36 42 92t25 90q1 9 -2.5 32t0.5 28q4 13 22 30.5t22 22.5q19 26 42.5 84.5t27.5 96.5q1 8 -3 25.5t-2 26.5q2 8 9 18t18 23t17 21q8 12 16.5 30.5t15 35t16 36t19.5 32t26.5 23.5t36 11.5t47.5 -5.5l-1 -3q38 9 51 9h761q74 0 114 -56t18 -130l-274 -906q-36 -119 -71.5 -153.5t-128.5 -34.5h-869q-27 0 -38 -15q-11 -16 -1 -43q24 -70 144 -70h923q29 0 56 15.5t35 41.5l300 987q7 22 5 57q38 -15 59 -43zM575 1056q-4 -13 2 -22.5t20 -9.5h608q13 0 25.5 9.5t16.5 22.5l21 64q4 13 -2 22.5t-20 9.5h-608q-13 0 -25.5 -9.5t-16.5 -22.5zM492 800q-4 -13 2 -22.5t20 -9.5h608q13 0 25.5 9.5t16.5 22.5l21 64q4 13 -2 22.5t-20 9.5h-608q-13 0 -25.5 -9.5t-16.5 -22.5z"/>
+   </g>
+</svg>
+
+</div>
+<div id="wb_Heading15" style="display:inline-block;width:100%;z-index:79;">
+<h1 id="Heading15">200</h1>
+</div>
+<div id="wb_Text12">
+<span style="color:#FFFFFF;font-family:Montserrat;font-size:19px;">eLearning Deployed</span>
+</div>
+</div>
+<div class="col-6">
+<div id="wb_FontAwesomeIcon6" style="display:inline-block;width:64px;height:64px;text-align:center;z-index:81;">
+<svg id="FontAwesomeIcon6" height="100%" width="100%" style="position:absolute;height:100%;width:100%;left:0;top:0" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(0.0402)">
+   <path transform="rotate(180) scale(-1,1) translate(0,-1536)" d="M960 1536l960 -384v-128h-128q0 -26 -20.5 -45t-48.5 -19h-1526q-28 0 -48.5 19t-20.5 45h-128v128zM256 896h256v-768h128v768h256v-768h128v768h256v-768h128v768h256v-768h59q28 0 48.5 -19t20.5 -45v-64h-1664v64q0 26 20.5 45t48.5 19h59v768zM1851 -64q28 0 48.5 -19t20.5 -45v-128h-1920v128q0 26 20.5 45t48.5 19h1782z"/>
+   </g>
+</svg>
+
+</div>
+<div id="wb_Heading16" style="display:inline-block;width:100%;z-index:82;">
+<h1 id="Heading16">25</h1>
+</div>
+<div id="wb_Text13">
+<span style="color:#FFFFFF;font-family:Montserrat;font-size:19px;">Institutions<br>Adapted</span>
+</div>
+</div>
+<div class="col-7">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid11">
+<div id="LayoutGrid11">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid33">
+<div id="LayoutGrid33">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+</div>
+</div>
+</div>
+</div>
+<div id="Layer1" style="position:fixed;text-align:center;left:auto;right:0px;top:auto;bottom:0px;width:58px;height:64px;z-index:129;">
+<div id="Layer1_Container" style="width:58px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_FontAwesomeIcon1" style="position:absolute;left:7px;top:10px;width:44px;height:44px;text-align:center;z-index:105;">
+<a href="#Top_Bar"><div id="FontAwesomeIcon1"><i class="fa fa-arrow-circle-o-up"></i></div></a></div>
+</div>
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1-overlay"></div>
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<hr id="Line1" style="display:none;width: 100%;z-index:116;">
+<div id="wb_links">
+<div id="links">
+<div class="row">
+<div class="col-1">
+<div id="wb_linksText1">
+<span style="color:#FFFFFF;"><strong>Rapid Solutions</strong></span>
+</div>
+<div id="wb_linksMenu1" style="display:inline-block;width:100%;z-index:107;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="#" target="_self">Instructional&nbsp;Design</a>
+</li>
+<li><a role="menuitem" href="#" target="_self">Website&nbsp;Design</a>
+</li>
+<li><a role="menuitem" href="./Lectora-Inspire.html" target="_self">ICT&nbsp;Training</a>
+</li>
+<li><a role="menuitem" href="./explore.html" target="_self">ILT&nbsp;to&nbsp;eLearning&nbsp;Conversion</a>
+</li>
+<li><a role="menuitem" href="./Mobile-App-Development.html" target="_self">Mobile&nbsp;eLearning</a>
+</li>
+<li><a role="menuitem" href="./Lms-Training.html" target="_self">LMS&nbsp;Solutions</a>
+</li>
+<li><a role="menuitem" href="./explore.html" target="_self">Blended&nbsp;Learning</a>
+</li>
+<li><a role="menuitem" href="./eLearning-Apps.html" target="_self">Micro&nbsp;Learning</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_linksText2">
+<span style="color:#FFFFFF;"><strong>Authoring Expertise</strong></span>
+</div>
+<div id="wb_linksMenu2" style="display:inline-block;width:100%;z-index:109;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="./adobe-captivate.html" target="_self">Adobe&nbsp;Captivate</a>
+</li>
+<li><a role="menuitem" href="./Articulate-Storyline.html" target="_self">Articulate&nbsp;Storyline</a>
+</li>
+<li><a role="menuitem" href="#" target="_self">Lectora&nbsp;Inspire</a>
+</li>
+<li><a role="menuitem" href="#" target="_self">Ispring</a>
+</li>
+<li><a role="menuitem" href="#" target="_self">Powerpoint</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_linksText3">
+<span style="color:#FFFFFF;"><strong>Contacts</strong></span>
+</div>
+<div id="wb_linksMenu3" style="display:inline-block;width:100%;z-index:111;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="#" target="_self">Blogs</a>
+</li>
+<li><a role="menuitem" href="./About-Services.html" target="_self">About</a>
+</li>
+<li><a role="menuitem" href="./explore.html" target="_self">People</a>
+</li>
+<li><a role="menuitem" href="./error.html" target="_self">Contact&nbsp;Us</a>
+</li>
+</ul>
+
+</div>
+<div id="wb_Text1">
+<p style="font-size:15px;line-height:17.5px;color:#FFFFFF;"><span style="font-weight:bold;">Address:</span></p>
+<p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">No 2, Jang Gwom St. Opp UEC </p>
+<p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">Behind Gada Biu Police Outstation,</p>
+<p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">Jos Plateau State.</p>
+<p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">Phone: 08165321429</p>
+</div>
+<div id="wb_linksIcon3" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:113;">
+<a href="mailto:ocaictcentre@gmail.com"><div id="linksIcon3"><i class="fa fa-envelope-o"></i></div></a>
+</div>
+<div id="wb_linksIcon1" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:114;">
+<a href="https://web.facebook.com/Oca-Ict-Centre-111896920269069/" target="_blank"><div id="linksIcon1"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_linksIcon4" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:115;">
+<a href="https://www.youtube.com/channel/UCZ6ZasPc2Pw4oV8-bxS0RuA/featured" target="_blank"><div id="linksIcon4"><i class="fa fa-youtube-square"></i></div></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_footerText">
+<span style="color:#FFFFFF;font-family:Montserrat;font-size:13px;">Copyright © 2020-OCA ICT CENTRE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--Start of Tawk.to Script-->
+<script>
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e134ae927773e0d832c1a57/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script--><!--Start of Tawk.to Script-->
+<script>
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e134ae927773e0d832c1a57/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script--></body>
+</html>
