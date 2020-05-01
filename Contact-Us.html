@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Cache-control" content="no-cache"><meta http-equiv="Cache-control" content="no-cache">
 <meta charset="utf-8">
-<title>Desktop Application</title>
+<title>Oca ICT Centre - Contact Us</title>
 <meta name="author" content="Oluegwu Chigozie">
 <meta name="categories" content="EducationEducation">
 <meta name="generator" content="OCA ICT CENTRE">
@@ -12,7 +12,7 @@
 <link href="Graduation_Cap_with_Diploma_PNG_Clipart-375.png" rel="apple-touch-icon" sizes="250x166">
 <link href="font-awesome.min.css" rel="stylesheet">
 <link href="Oca_Web_Site_git.css" rel="stylesheet">
-<link href="Multemedia-ebook.css" rel="stylesheet">
+<link href="Contact-Us.css" rel="stylesheet">
 <script src="jquery-1.12.4.min.js"></script>
 <script src="wb.newsviewer.min.js"></script>
 <script src="jquery-ui.min.js"></script>
@@ -50,7 +50,46 @@ $(document).ready(function()
    });
 });
 </script>
-<!-- Insert Google Analytics code here -->
+<!-- Insert Google Analytics code here --><script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script>
+var maps;
+var geocoder;
+
+function init() 
+{
+   maps = [];
+   geocoder = new google.maps.Geocoder();
+
+   var styles = 
+   {
+      'Normal': [
+	  {
+         featureType: 'all',
+         stylers: [{saturation:0}]
+      }]
+   };
+
+   for (var s in styles) 
+   {
+      var opt = {
+	      mapTypeControlOptions: {
+		  mapTypeIds: [s]
+	     },
+         disableDefaultUI: false,
+         navigationControl: true,
+         scrollwheel: false,
+         center: new google.maps.LatLng(40.770401, -73.9735114),
+         zoom: 8,
+         mapTypeId: s
+      };
+      var div = document.getElementById('wb_maps');
+      var map = new google.maps.Map(div, opt);
+      var styledMapType = new google.maps.StyledMapType(styles[s], {name: s});
+      map.mapTypes.set(s, styledMapType);
+   }
+}
+init();
+</script>		
 </head>
 <body>
 <div id="wb_header">
@@ -114,33 +153,49 @@ $(document).ready(function()
 </div>
 </div>
 </div>
-<div id="wb_LayoutGrid6">
-<div id="LayoutGrid6-overlay"></div>
-<div id="LayoutGrid6">
-<div class="row">
-<div class="col-1">
-<div id="NewsFeedTicker2" style="overflow:hidden;height:84px;z-index:2;">
-</div>
-<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:3;">
-<h2 id="Heading1">Interactive eBooks</h2>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div id="wb_LayoutGrid4">
+<div id="LayoutGrid4-overlay"></div>
 <div id="LayoutGrid4">
 <div class="row">
 <div class="col-1">
-<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:4;">
-<h2 id="Heading2">Serving your learners - Globally and Cross-industry</h2>
+<div id="wb_LayoutGrid9">
+<div id="LayoutGrid9">
+<div class="row">
+<div class="col-1">
+<div id="NewsFeedTicker2" style="overflow:hidden;height:29px;z-index:6;">
+</div>
+<div id="wb_Text4">
+<span style="color:#FFFFFF;font-family:Montserrat;font-size:27px;"><strong>Contact Us</strong></span><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:21px;"><br></span>
+</div>
+<div id="wb_Shape3" style="display:inline-block;width:111px;height:3px;z-index:8;position:relative;">
+<div id="Shape3"></div>
+</div>
+<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:9;">
+<h4 id="Heading1">If you want learn more about us, yo are in the right place. Read to learn most of our expertise</h4>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div id="wb_LayoutGrid11">
-<div id="LayoutGrid11">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid7">
+<div id="LayoutGrid7-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+<path class="divider-fill" d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z">
+</path>
+</svg></div>
+<div id="LayoutGrid7">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
 <div class="row">
 <div class="col-1">
 </div>
@@ -151,9 +206,70 @@ $(document).ready(function()
 <div id="LayoutGrid10">
 <div class="row">
 <div class="col-1">
-<div id="wb_Heading3" style="display:inline-block;width:100%;z-index:5;">
-<h2 id="Heading3">Who need our services</h2>
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:11;">
+<h2 id="Heading2">Contact Details</h2>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="row">
+<div class="col-1">
+<div id="wb_LayoutGrid6">
+<div id="LayoutGrid6">
+<div class="row">
+<div class="col-1">
+<div id="wb_FontAwesomeIcon1" style="display:inline-block;width:28px;height:26px;text-align:center;z-index:12;">
+<div id="FontAwesomeIcon1"><i class="fa fa-phone-square"></i></div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Text3">
+<span style="color:#696969;font-family:Montserrat;font-size:16px;letter-spacing:2.07px;line-height:19px;"><strong>Phone:</strong></span><span style="color:#696969;font-family:Montserrat;font-size:15px;letter-spacing:2.07px;line-height:19px;"> 08165321429</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid11">
+<div id="LayoutGrid11">
+<div class="row">
+<div class="col-1">
+<div id="wb_FontAwesomeIcon3" style="display:inline-block;width:28px;height:26px;text-align:center;z-index:14;">
+<div id="FontAwesomeIcon3"><i class="fa fa-phone-square"></i></div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Text6">
+<span style="color:#696969;font-family:Montserrat;font-size:16px;letter-spacing:2.07px;line-height:19px;"><strong>Time:</strong></span><span style="color:#696969;font-family:Montserrat;font-size:15px;letter-spacing:2.07px;line-height:19px;"> 7:am - 5:pm</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Text2">
+<span style="color:#696969;font-family:Montserrat;font-size:16px;letter-spacing:2.07px;line-height:22px;"><strong>Address:</strong></span><span style="color:#696969;font-family:Montserrat;font-size:15px;letter-spacing:2.07px;line-height:21px;"><br>No 2, Jang Gwom St. Opp UEC <br>Behind Gada Biu Police Outstation,<br>Jos Plateau State.<br>Phone: 08165321429<br></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_maps_grid">
+<div id="maps_grid">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_maps">
+&nbsp;
+</div>
+</div>
+<div class="col-3">
+
 </div>
 </div>
 </div>
@@ -163,7 +279,7 @@ $(document).ready(function()
 <div id="LayoutGrid1">
 <div class="row">
 <div class="col-1">
-<hr id="Line1" style="display:none;width: 100%;z-index:16;">
+<hr id="Line1" style="display:none;width: 100%;z-index:35;">
 <div id="wb_links">
 <div id="links">
 <div class="row">
@@ -171,7 +287,7 @@ $(document).ready(function()
 <div id="wb_linksText1">
 <span style="color:#FFFFFF;"><strong>Rapid Solutions</strong></span>
 </div>
-<div id="wb_linksMenu1" style="display:inline-block;width:100%;z-index:7;">
+<div id="wb_linksMenu1" style="display:inline-block;width:100%;z-index:26;">
 <ul role="menubar">
 <li class="firstmain"><a role="menuitem" href="#" target="_self">Instructional&nbsp;Design</a>
 </li>
@@ -197,7 +313,7 @@ $(document).ready(function()
 <div id="wb_linksText2">
 <span style="color:#FFFFFF;"><strong>Authoring Expertise</strong></span>
 </div>
-<div id="wb_linksMenu2" style="display:inline-block;width:100%;z-index:9;">
+<div id="wb_linksMenu2" style="display:inline-block;width:100%;z-index:28;">
 <ul role="menubar">
 <li class="firstmain"><a role="menuitem" href="./adobe-captivate.html" target="_self">Adobe&nbsp;Captivate</a>
 </li>
@@ -217,7 +333,7 @@ $(document).ready(function()
 <div id="wb_linksText3">
 <span style="color:#FFFFFF;"><strong>Contacts</strong></span>
 </div>
-<div id="wb_linksMenu3" style="display:inline-block;width:100%;z-index:11;">
+<div id="wb_linksMenu3" style="display:inline-block;width:100%;z-index:30;">
 <ul role="menubar">
 <li class="firstmain"><a role="menuitem" href="#" target="_self">Blogs</a>
 </li>
@@ -237,13 +353,13 @@ $(document).ready(function()
 <p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">Jos Plateau State.</p>
 <p style="font-size:13px;line-height:16.5px;color:#F5F5F5;">Phone: 08165321429</p>
 </div>
-<div id="wb_linksIcon3" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:13;">
+<div id="wb_linksIcon3" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:32;">
 <a href="mailto:ocaictcentre@gmail.com"><div id="linksIcon3"><i class="fa fa-envelope-o"></i></div></a>
 </div>
-<div id="wb_linksIcon1" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:14;">
+<div id="wb_linksIcon1" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:33;">
 <a href="https://web.facebook.com/Oca-Ict-Centre-111896920269069/" target="_blank"><div id="linksIcon1"><i class="fa fa-facebook"></i></div></a>
 </div>
-<div id="wb_linksIcon4" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:15;">
+<div id="wb_linksIcon4" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:34;">
 <a href="https://www.youtube.com/channel/UCZ6ZasPc2Pw4oV8-bxS0RuA/featured" target="_blank"><div id="linksIcon4"><i class="fa fa-youtube-square"></i></div></a>
 </div>
 </div>
