@@ -184,8 +184,7 @@ $(document).ready(function()
 });
 </script>
 </head>
-<body>
-   <!-- Load Facebook SDK for JavaScript -->
+<body <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>
       <script>
         window.fbAsyncInit = function() {
@@ -206,6 +205,30 @@ $(document).ready(function()
       <!-- Your customer chat code -->
       <div class="fb-customerchat"
         attribution=setup_tool
+        page_id="111537503520146"
+  theme_color="#0084ff">
+      </div>>
+<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v6.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=install_email
         page_id="111537503520146"
   theme_color="#0084ff">
       </div>
@@ -259,6 +282,9 @@ $(document).ready(function()
 </li>
 <li class="">
 <a href="./Contact-Us.html">Contact</a>
+</li>
+<li class="">
+<a href="./hire-us.html"><i class="fa fa-users"></i>Hire Us</a>
 </li>
 </ul>
 </div>
@@ -522,7 +548,7 @@ $(document).ready(function()
 <span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:29px;"><br></span><span style="color:#4F4F4F;font-family:Montserrat;font-size:19px;line-height:29px;">With many years of practices, reseach, OCA ICT CENTRE has literally mastered all popular authoring tools – Articulate (all versions including Articulate Rise), Lectora (all versions), Captivate (all versions), Camtasia and many more – and over the years, has developed hundreds of hours of eLearning using these tools.<br>We not only create elearning contents but also train personnel how to develop world standard and compliances training materials with these tools, we also deploy learning to any popular Learning Management System(LMS) or package Desktop and Mobile Stand Alone Application which learners can access offline with their devices.</span>
 </div>
 <div id="wb_ThemeableButton8" style="display:inline-block;width:100%;z-index:36;">
-<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton8" href="./instructional-design.html" target="_blank" id="ThemeableButton8" onclick="document.getElementById('Home_Screen').submit();return false;" style="width:100%;height:100%;">Discover More</a>
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton8" href="./instructional-design.html" id="ThemeableButton8" onclick="document.getElementById('Home_Screen').submit();return false;" style="width:100%;height:100%;">Discover More</a>
 </div>
 </div>
 </div>
@@ -544,7 +570,7 @@ $(document).ready(function()
 <span style="color:#000000;font-family:Montserrat;font-size:19px;line-height:29px;">With many years of experiences in web site design, we develop proffesional and fully responsive websites which means you can view it with any modern devices.<br>We create different kinds of websites be it educational, ecommerce, news, and any other website you may think of.<br>We aslo training individuals who want to acquire skills in web design using best CMS Tools such WordPress</span>
 </div>
 <div id="wb_ThemeableButton7" style="display:inline-block;width:100%;z-index:40;">
-<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton7" href="./website-design.html" target="_blank" id="ThemeableButton7" onclick="document.getElementById('Home_Screen').submit();return false;" style="width:100%;height:100%;">Discover More</a>
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton7" href="./website-design.html" id="ThemeableButton7" onclick="document.getElementById('Home_Screen').submit();return false;" style="width:100%;height:100%;">Discover More</a>
 </div>
 </div>
 </div>
@@ -636,7 +662,7 @@ $(document).ready(function()
 <h2 id="Heading17">We are open to build your school website too</h2>
 </div>
 <div id="wb_ThemeableButton6" style="display:inline-block;width:100%;z-index:63;">
-<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton6" href="./Contact-Us.html" target="_blank" id="ThemeableButton6" onclick="document.getElementById('Home_Screen').submit();return false;" style="width:100%;height:100%;">Get in Touch</a>
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton6" href="./Contact-Us.html" id="ThemeableButton6" onclick="document.getElementById('Home_Screen').submit();return false;" style="width:100%;height:100%;">Get in Touch</a>
 </div>
 </div>
 </div>
@@ -806,7 +832,7 @@ $(document).ready(function()
 <ul role="menubar">
 <li class="firstmain"><a role="menuitem" href="#" target="_self">Instructional&nbsp;Design</a>
 </li>
-<li><a role="menuitem" href="#" target="_self">Website&nbsp;Design</a>
+<li><a role="menuitem" href="./form.html" target="_self">Website&nbsp;Design</a>
 </li>
 <li><a role="menuitem" href="./Lectora-Inspire.html" target="_self">ICT&nbsp;Training</a>
 </li>
@@ -856,7 +882,7 @@ $(document).ready(function()
 </li>
 <li><a role="menuitem" href="./explore.html" target="_self">People</a>
 </li>
-<li><a role="menuitem" href="#" target="_self">Contact&nbsp;Us</a>
+<li><a role="menuitem" href="./hire-us.html" target="_self">Contact&nbsp;Us</a>
 </li>
 </ul>
 
