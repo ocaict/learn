@@ -1,4 +1,7 @@
-div#container
+#pageDIV { position: absolute; top:0px; left: ' + left + 'px; width:700px; height:800px; clip:rect(0px 700px 800px 0px); overflow:hidden;' )
+    if(is.iOS)
+		document.write('-webkit-text-size-adjust:100%;')
+    document.write('} div#container
 {
    width: 970px;
    position: relative;

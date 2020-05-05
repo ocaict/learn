@@ -4837,82 +4837,6 @@ body
    border-radius: 0px;
    text-align: center;
 }
-#wb_LayoutGrid13
-{
-   visibility: visible;
-   display: table;
-   font-size: 8px;
-   font-family: Arial;
-   font-weight: normal;
-   font-style: normal;
-   text-decoration: none;
-   background-color: transparent;
-   background-image: none;
-}
-#wb_LayoutGrid13
-{
-   margin-top: 0px;
-   margin-bottom: 0px;
-}
-#LayoutGrid13
-{
-   padding: 0px 15px 200px 15px;
-}
-#LayoutGrid13 .row
-{
-   margin-right: -15px;
-   margin-left: -15px;
-}
-#LayoutGrid13 > .row > .col-1
-{
-   padding-right: 15px;
-   padding-left: 15px;
-}
-#LayoutGrid13 > .row > .col-1
-{
-   display: block;
-   width: 100%;
-   border: 0px solid #FFFFFF;
-   border-radius: 0px;
-   text-align: center;
-}
-#wb_Heading1
-{
-   width: 100%;
-   visibility: visible;
-   display: block;
-   margin: 0;
-   padding: 0px 0px 20px 0px;
-   color: #FFFFFF;
-   font-size: 32px;
-   font-family: Montserrat;
-   font-weight: normal;
-   font-style: normal;
-   text-decoration: none;
-   background-color: transparent;
-   background-image: none;
-}
-#wb_Heading1
-{
-   background-color: transparent;
-   background-image: none;
-   border: 0px solid #000000;
-   text-align: center;
-}
-#Heading1
-{
-   color: #FFFFFF;
-   font-family: Montserrat;
-   font-weight: normal;
-   font-size: 32px;
-}
-#NewsFeedTicker1
-{
-   width: 100%;
-   visibility: visible;
-   display: block;
-   margin: 0px 0px 20px 0px;
-}
 #wb_LayoutGrid6
 {
    visibility: visible;
@@ -5144,53 +5068,6 @@ body
    padding-left: 15px;
 }
 #LayoutGrid16 > .row > .col-1
-{
-   display: block;
-   width: 100%;
-   border: 0px solid #FFFFFF;
-   border-radius: 0px;
-   text-align: center;
-}
-#wb_LayoutGrid5
-{
-   visibility: visible;
-   display: table;
-   font-size: 8px;
-   font-family: Arial;
-   font-weight: normal;
-   font-style: normal;
-   text-decoration: none;
-   background-color: transparent;
-   background-image: none;
-}
-#wb_LayoutGrid5
-{
-   margin-top: 0px;
-   margin-bottom: 0px;
-}
-#LayoutGrid5
-{
-   padding: 30px 15px 30px 15px;
-}
-#LayoutGrid5 .row
-{
-   margin-right: -15px;
-   margin-left: -15px;
-}
-#LayoutGrid5 > .row > .col-1, #LayoutGrid5 > .row > .col-2
-{
-   padding-right: 15px;
-   padding-left: 15px;
-}
-#LayoutGrid5 > .row > .col-1
-{
-   display: block;
-   width: 100%;
-   border: 0px solid #FFFFFF;
-   border-radius: 0px;
-   text-align: center;
-}
-#LayoutGrid5 > .row > .col-2
 {
    display: block;
    width: 100%;
@@ -6778,82 +6655,6 @@ body
    border-radius: 0px;
    text-align: center;
 }
-#wb_LayoutGrid13
-{
-   visibility: visible;
-   display: table;
-   font-size: 8px;
-   font-family: Arial;
-   font-weight: normal;
-   font-style: normal;
-   text-decoration: none;
-   background-color: transparent;
-   background-image: none;
-}
-#wb_LayoutGrid13
-{
-   margin-top: 0px;
-   margin-bottom: 0px;
-}
-#LayoutGrid13
-{
-   padding: 0px 15px 200px 15px;
-}
-#LayoutGrid13 .row
-{
-   margin-right: -15px;
-   margin-left: -15px;
-}
-#LayoutGrid13 > .row > .col-1
-{
-   padding-right: 15px;
-   padding-left: 15px;
-}
-#LayoutGrid13 > .row > .col-1
-{
-   display: block;
-   width: 100%;
-   border: 0px solid #FFFFFF;
-   border-radius: 0px;
-   text-align: center;
-}
-#wb_Heading1
-{
-   width: 100%;
-   visibility: visible;
-   display: block;
-   margin: 0;
-   padding: 0px 0px 20px 0px;
-   color: #FFFFFF;
-   font-size: 32px;
-   font-family: Montserrat;
-   font-weight: normal;
-   font-style: normal;
-   text-decoration: none;
-   background-color: transparent;
-   background-image: none;
-}
-#wb_Heading1
-{
-   background-color: transparent;
-   background-image: none;
-   border: 0px solid #000000;
-   text-align: center;
-}
-#Heading1
-{
-   color: #FFFFFF;
-   font-family: Montserrat;
-   font-weight: normal;
-   font-size: 32px;
-}
-#NewsFeedTicker1
-{
-   width: 100%;
-   visibility: visible;
-   display: block;
-   margin: 0px 0px 20px 0px;
-}
 #wb_LayoutGrid6
 {
    visibility: visible;
@@ -7085,53 +6886,6 @@ body
    padding-left: 15px;
 }
 #LayoutGrid16 > .row > .col-1
-{
-   display: block;
-   width: 100%;
-   border: 0px solid #FFFFFF;
-   border-radius: 0px;
-   text-align: center;
-}
-#wb_LayoutGrid5
-{
-   visibility: visible;
-   display: table;
-   font-size: 8px;
-   font-family: Arial;
-   font-weight: normal;
-   font-style: normal;
-   text-decoration: none;
-   background-color: transparent;
-   background-image: none;
-}
-#wb_LayoutGrid5
-{
-   margin-top: 0px;
-   margin-bottom: 0px;
-}
-#LayoutGrid5
-{
-   padding: 30px 15px 30px 15px;
-}
-#LayoutGrid5 .row
-{
-   margin-right: -15px;
-   margin-left: -15px;
-}
-#LayoutGrid5 > .row > .col-1, #LayoutGrid5 > .row > .col-2
-{
-   padding-right: 15px;
-   padding-left: 15px;
-}
-#LayoutGrid5 > .row > .col-1
-{
-   display: block;
-   width: 100%;
-   border: 0px solid #FFFFFF;
-   border-radius: 0px;
-   text-align: center;
-}
-#LayoutGrid5 > .row > .col-2
 {
    display: block;
    width: 100%;
