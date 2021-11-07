@@ -1,0 +1,10 @@
+.jumbtron {
+    padding: 20px;
+
+}
+
+.jumbtron p {
+    width: 600px;
+    margin: auto;
+    max-width: 100%;
+}
