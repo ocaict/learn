@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.form-bg {
+    background-image: url(../images/form-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form {
+    -webkit-user-select: none;
+}
+
+.form-container {
+    margin: 0px auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    opacity: 0.9;
+}
+
+.header {
+    background-color: #f8eeee;
+    font-size: 12px;
+    border-bottom: 1px solid #cacaca;
+    padding: 20px 40px;
+}
+
+.header h2 {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.form {
+    padding: 30px 40px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.form label {
+    display: flex;
+    padding-top: 10px;
+    font-size: 18px;
+    margin-bottom: 5px;
+
+}
+
+.form input {
+    border: 0;
+    /* border-radius: 4px; */
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid gray;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#firstname,
+#lastname,
+#username {
+    background-image: url(../images/user.png);
+    background-repeat: no-repeat;
+    background-size: 28px;
+    background-position: left;
+    padding-left: 32px;
+    padding-bottom: 5px;
+}
+
+#email {
+    background-image: url(../images/email.png);
+    background-repeat: no-repeat;
+    background-size: 28px;
+    background-position: left;
+    padding-left: 32px;
+    padding-bottom: 5px;
+}
+
+#password {
+    background-image: url(../images/password.png);
+    background-repeat: no-repeat;
+    background-size: 28px;
+    background-position: left;
+    padding-left: 32px;
+    padding-bottom: 5px;
+}
+
+#age {
+    background-image: url(../images/age.png);
+    background-repeat: no-repeat;
+    background-size: 28px;
+    background-position: left;
+    padding-left: 32px;
+    padding-bottom: 5px;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.submitbtn {
+    background-color: navy;
+    font-size: 18px;
+    color: white;
+    margin: 20px 0px;
+    width: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+    border-radius: 10px;
+    animation: buttonEnter 1s;
+
+}
+
+.submitbtn:hover {
+    background-color: #005858;
+    transform: scale(.98);
+
+}
+
+.error {
+    color: red;
+}
+
+
+
+
+@keyframes buttonEnter {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
