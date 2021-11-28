@@ -97,7 +97,7 @@ header img {
 }
 
 #container-bg {
-    background: url(/images/img-bg.jpg) no-repeat center center;
+    background: url(../images/img-bg.jpg) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
