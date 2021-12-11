@@ -1,47 +1,57 @@
-const formInputs = Array.from(document.querySelectorAll("form input"))
+
+
+        // Import the functions you need from the SDKs you need
+        // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
+        // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js";
+        // // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyA9PIIdbqPAE3Vyay5L9BJpcdsj-OZLSYE",
+            authDomain: "oca-media-app.firebaseapp.com",
+            projectId: "oca-media-app",
+            storageBucket: "oca-media-app.appspot.com",
+            messagingSenderId: "494641529596",
+            appId: "1:494641529596:web:c1addb417879f996144d79",
+            measurementId: "G-EQWXZEJHDS"
+          };
+        
+          // Initialize Firebase
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          // firebase.analytics();
+          const db = firebase.firestore();
+
+
+const formInputs = Array.from(document.querySelectorAll("form .input"))
 let errorEles = Array.from(document.querySelectorAll(".error"))
 const form = document.querySelector(".form");
+const course = document.querySelector("#courses");
+const password = document.querySelector("#password");
+const confirmpassword = document.querySelector("#password-confirm");
 let isValid = false
 
 
 
 
+let mainInputs;
+
 function showInputError(elem, msg){
         elem.innerHTML = msg
-       
-        // switch(elem.id){
-        //     case "firstname-error":
-        //         elem.innerHTML = msg
-        //     break;
-        //     case "lastname-error":
-        //         elem.innerHTML = msg
-        //     break;
-        //     case "username-error":
-        //         elem.innerHTML = msg
-        //     break;
-        //     case "email-error":
-        //         elem.innerHTML = msg
-        //     break;
-        //     case "password-error":
-        //         elem.innerHTML = msg
-        //     break;
-        // }
-    
 }
 function hideError(elem){
         elem.innerHTML = ""
      
 }
 
-
-
-
+//Validation Rules
 let nameRule = /^[a-z\d]{3,10}$/i
 let usernameRule = /^[a-z]{3,8}$/
 let emailRule = /^([a-z\d-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
-let phoneRule = /^\d{6,20}$/
+// let phoneRule = /^\d{6,20}$/
+let passwordRule= /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
 // let validName = nameRule.test(uname.value)
-
 
 function validateName(nameEle){
    let validName;
@@ -88,102 +98,89 @@ function validateName(nameEle){
             }
        break;
         case "password":
-            let validPassword = phoneRule.test(nameEle.value)
+            let validPassword = passwordRule.test(nameEle.value)
             if(validPassword){
                 isValid = true
             }else{
                 isValid = false
-                showInputError(errorEles[4], "Enter a valid user Password")
+                showInputError(errorEles[4], "Password must have be at least 6 characters with atleast 1 uppercase letter, special chareter and number")
             }
        break;
     }
-   
-/* 
-     if (validName && validUsername && validEmail && validPassword){
 
-         return true
-     }
-     else{
-         switch(nameEle.id){
-             case "firstname":
-                 alert("First Name should be between 3 and 10 chars long")
-            break;
-            case "lastname":
-                alert("Last Name should be between 3 and 10 chars long")
-            break;
-            case "username":
-                alert("Username ..")
-            break;
-            case "email":
-                alert("Enter Valid Email")
-            break;
-            case "password":
-                alert("Enter valid password" + nameEle.id)
-            break;
-            default:
-                alert("All required field must be filled")
-         }
-          
-
-        //  alert("Name should be letters between 3 and 10 charcs")
-         return false
-         
-        
-     }  */
  }
 
-function validateUsername(nameEle){
-    
-    let validUsername = usernameRule.test(nameEle.value)
-
-     if (validUsername){
-         return true
-     }
-     else{
-         switch(nameEle.id){
-             case "username":
-                 alert("Enter a user name between 5 and 8 characters")
-            break;
-         }
-
-        //  alert("Name should be letters between 3 and 10 charcs")
-         return false
-         
-        
-     } 
- }
 
 
 
 function validateForm(){
-    let mainInputs = formInputs.filter(input => input.type !== "submit").filter(input => input.id !== "password-confirm")
+     mainInputs = formInputs.filter(input => input.type !== "submit").filter(input => input.id !== "password-confirm")
     mainInputs.forEach(input => {
-           
            validateName(input)
 
-        //    if(input.id == "firstname"){
-        //       validateName(input)
-        //    }
-        //    if(input.id == "lastname"){
-        //     validateName(input)
-        //    }
-        //    if(input.id == "username"){
-        //     validateUsername(input)
-        //    }
     })
 
     
 }
 
 formInputs.forEach((input, index ) => {
-   input.addEventListener("change", () => {
+   input.addEventListener("input", () => {
        hideError(errorEles[index])
    })
 })
 
+//Clear Inputs
+function clearInputs(){
+formInputs.forEach((input, index ) => {
+   input.value = ""
+})
+confirmpassword.value = ""
+}
+
+let confirmPasswodError = document.getElementById("password-confirm-error")
+let courseError = document.getElementById("course-error")
+let indicator = document.querySelector(".indicator")
+
+course.addEventListener("change", () => {courseError.innerHTML = ""})
+confirmpassword.addEventListener("input", () => {confirmPasswodError.innerHTML = ""})
+
 form.addEventListener("submit", (e) => {
-    e.preventDefault()
-    console.log(isValid)
+    e.preventDefault();
+    if(isValid){
+        if(password.value !== confirmpassword.value){
+            confirmPasswodError.innerHTML = "Password Does not Match"
+        }else{
+            if(!course.value){
+                courseError.innerHTML = "Select Course"
+            }else{
+                indicator.innerHTML = "Submitting..."
+        let data = {}
+        mainInputs.forEach(input => {
+           data[input.name] = input.value
+        })
+                // Add a new document in collection "cities"
+                    // Add a new document in collection "cities"
+                            // Add a new document with a generated id.
+                    db.collection("students").add({...data, course:course.value, timestamp: firebase.firestore.FieldValue.serverTimestamp()})
+                    .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    if(docRef.id){
+                        indicator.innerHTML = "Your Data has been submitted"
+                        window.location.href = "./success.html"
+                        clearInputs()
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        
+            }
+        }
+        // window.location.href = "./contact.html"
+
+    }else{
+        console.log("Invalid")
+    }
    
 })
 
