@@ -21,10 +21,38 @@
           firebase.initializeApp(firebaseConfig);
           // firebase.analytics();
           const db = firebase.firestore();
+
+
+const urlParams = new URLSearchParams(window.location.search);
+ const email = urlParams.get('email');
+const image = document.querySelector("img")
+const user = document.querySelector(".user")
+
+
+
+db.collection("students").where("email", "==", email)
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+            image.src = doc.data().passport
+            user.innerHTML = doc.data().username
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+
+
+
+
+
+
          
   // Add a new document in collection "cities"
   
-  function addUser(){
+/*   function addUser(){
     if(todoInput.value){
         db.collection("todo-items").add({
             text: todoInput.value,
@@ -97,3 +125,4 @@ addBtn.addEventListener("click", addTodo)
           }
       })
   }
+ */

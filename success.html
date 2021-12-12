@@ -17,8 +17,23 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <script src="./js/header.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script defer src="./js/firebase.js"></script>
 
   <!-- <link rel="stylesheet" href="fontawsome/css/all.min.css"> -->
+
+  <style>
+    img {
+      width: 80px;
+      padding: 10px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
@@ -29,8 +44,9 @@
   <div class="container">
     <div class="contact-container">
 
-
+      <img src="" alt="">
       <h1>Congratulation</h1>
+      <h2 class="user"></h2>
       <p>You have been Registered</p>
       <div class="contact">
         <a href="./register.html">Register New User</a>

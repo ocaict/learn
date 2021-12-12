@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OcaWebTech -Register</title>
+    <title>OcaWebTech - Register</title>
     <link rel="stylesheet" href="css/register.css">
 
     <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -23,8 +23,16 @@
                 <h2 class="title">Oca Web Technology</h2>
             </div>
             <!-- onsubmit="validateForm()" -->
-            <form class="form" action="http://localhost:3600/user/register" method="POST" onsubmit="validateForm()"
-                autocomplete="off">
+            <form class="form" action="http://localhost:3600/user/register" method="POST"
+                onsubmit="return validateForm()" autocomplete="off">
+
+                <div>
+                    <!-- <img src="" alt=""> -->
+                    <label class="passport-label" for="passport"></label>
+                    <div class="file">
+                        <input id="passport" class="passport" type="file" accept="image/*">
+                    </div>
+                </div>
 
                 <div>
                     <label for="firstname">First Name:</label>
@@ -71,21 +79,33 @@
                     <select id="courses">
 
                         <option selected disabled value="">Select</option>
-                        <option value="Basic Computer Application">Basic Computer Application</option>
-                        <option value="Word processing(Ms Word)">Word processing(Ms Word)</option>
-                        <option value="Powerpoint">PowerPoint</option>
-                        <option value="Excel">SpreadSheet (MS Excel)</option>
-                        <option value="DTP">Desktop Publishing (MS Publisher) </option>
-                        <option value="Access">Database (MS Access)</option>
-                        <option value="CorelDraw">CorelDraw</option>
-                        <option value="Internet">Internet/NetWorking</option>
-                        <option value="Wordpress">Web Design (WordPresb CMS)</option>
-                        <option value="Web Development">Web Development (HTML CSS and JavaScript)</option>
+                        <option value="Certificate in  Computer Application">Certificate in Computer Application
+                        </option>
+                        <option value="Word Processing(Ms Word)">Word processing(Ms Word)</option>
+                        <option value="MS Powerpoint">MS PowerPoint</option>
+                        <option value="MS Excel">SpreadSheet (MS Excel)</option>
+                        <option value="Desktop Publishing (DTP)">Desktop Publishing (MS Publisher) </option>
+                        <option value="MS Access">Database Management Systenm (MS Access)</option>
+                        <option value="CorelDraw Graphic Design">Graphic Design CorelDraw</option>
+                        <option value="Internet/Networking">Internet/NetWorking</option>
+                        <option value="Website Design (WordPress)">Web Design (WordPres CMS)</option>
+                        <option value="Web Development (HTML, CSS & JavaScript)">Web Development (HTML CSS and
+                            JavaScript)</option>
                         <option value="BootStrap">CSS Library (BootStrap)</option>
-                        <option value="JavaScript">JavaScript Full Course</option>
+                        <option value="Modern JavaScript">Modern JavaScript Full Course</option>
                         <option value="jQuery">JavaScript Library (jQuery)</option>
+                        <option value="Moodle LMS">Moodle LMS Training</option>
+                        <option value="Node JS">Node JS</option>
+                        <option value="PHP">PHP</option>
+                        <option value="SQL/MYSQL/SQLITE">RDBMS (SQL/MYSQL/SQLITE)</option>
+                        <option value="Mongodb">NO SQL DBMS (Mongodb/FireBase)</option>
                         <option value="React"> JavaScript FrameWork (ReactJS)</option>
-                        <option value="LMS">Moodle LMS Training</option>
+                        <option value="React Native"> Mobile App Development with React Native</option>
+                        <option value="Ionic FrameWork">Mobile App Development with Ionic FrameWork</option>
+                        <option value="Capacitor/Cordova"> Mobile App Develoment with Capacitor/Cordova</option>
+                        <option value="Electron"> Desktop App Development with ElectronJS</option>
+                        <option value="eLearning Design">eLearning Design with (Captivate/Articulate/Lectora)</option>
+
                     </select>
                     <small id="course-error" class="error"></small>
                 </div>
@@ -98,7 +118,7 @@
                     <input id="age" type="number" name="age" placeholder="20" maxlength="3">
                 </div> -->
 
-                <input class="submitbtn" type="submit" value="Sign Up" style="border: 0px;">
+                <input class="submitbtn" type="submit" value="Apply" style="border: 0px;">
 
                 <div class="indicator"></div>
             </form>
