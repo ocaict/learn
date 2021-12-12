@@ -37,7 +37,9 @@ db.collection("students").where("email", "==", email)
             // doc.data() is never undefined for query doc snapshots
             console.log(doc.id, " => ", doc.data());
             image.src = doc.data().passport
-            user.innerHTML = doc.data().username
+            user.innerHTML = `<h2>${doc.data().username}</h2>`
+            user.innerHTML += `<p> you have choosen to study ${doc.data().course} </p>`
+
         });
     })
     .catch((error) => {
