@@ -38,7 +38,7 @@ db.collection("students").where("email", "==", email)
             console.log(doc.id, " => ", doc.data());
             image.src = doc.data().passport
             user.innerHTML = `<h2>${doc.data().username}</h2>`
-            user.innerHTML += `<p> you have choosen to study ${doc.data().course} </p>`
+            user.innerHTML += `<p> you have choosen to study <h2>${doc.data().course} </h2></p>`
 
         });
     })
