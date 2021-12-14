@@ -9,23 +9,20 @@
   <meta name="keyword" content="">
 
   <meta name="author" content="Oluegwu Chigozie">
-  <title>eTraining Academy - Contact Us</title>
+  <title>Oca WebTech - Contact Us</title>
 
   <link rel="Stylesheet" href="css/index.css">
   <link rel="Stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <script src="./js/header.js"></script>
+  <script src="./js/main.js"></script>
 
   <!-- <link rel="stylesheet" href="fontawsome/css/all.min.css"> -->
 </head>
 
 <body>
   <oca-header></oca-header>
-
-
-
   <div class="container">
     <div class="contact-container">
 
@@ -47,71 +44,39 @@
           <ul>
             <li>Phone: <a href="tel:+2348165321429">08165321429</a></li>
             <li>Email: <a href="mailto:ocaictcentre@gmail.com">ocaictcentre@gmail.com</a></li>
-            <li>Website: <a href="/index.html">www.ocatraining.ga</a></li>
+            <!-- <li>Website: <a href="/index.html">www.ocatraining.ga</a></li> -->
           </ul>
         </div>
       </div>
+      <div class="contact-form-container">
+        <h3>Get in Touch</h3>
+        <form action="" autocomplete="off" onsubmit="alert('We are yet to implemt the submission'); return false">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" name="name" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Your Phone No *</label>
+            <input type="phone" name="phone" id="phone" placeholder="Phone No" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email *</label>
+            <input type="email" name="email" id="email" placeholder="Your Email" required>
+          </div>
 
+          <div class="textarea">
+            <label for="message">Message *</label>
+            <textarea name="message" id="message" placeholder="Enter your Message" required></textarea>
+          </div>
+
+          <button class="submit-btn">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 
 
-  <div class="footer-container">
-    <div id="footer">
-      <div class="logo-container">
-        <a href="./index.html"> <img class="logo" src="/images/logo.png" alt="Logo"></a>
-        <p><a href="./index.html">Oca WebTech</a></p>
-      </div>
-
-      <div class="links">
-        <h3>Important Links</h3>
-        <ul>
-          <li>
-            <a href="index.html" class="active"> Home</a>
-          </li>
-
-          <li>
-            <a href="about.html"> About</a>
-          </li>
-
-          <li>
-            <a href="services.html">Services</a>
-          </li>
-
-          <li>
-            <a href="contact.html"> Contact</a>
-          </li>
-
-        </ul>
-
-
-      </div>
-
-      <div class="social">
-        <h3>Social Contact</h3>
-        <a href="https://web.facebook.com/ocawebtech" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.youtube.com/channel/UCZ6ZasPc2Pw4oV8-bxS0RuA" target="_blank"> <i
-            class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-
-      </div>
-
-    </div>
-    <div class="policy-container">
-      <ul class="links ">
-        <li>
-          <a href="privacy.html" class="active"> Privacy Policy</a>
-        </li>
-
-        <li>
-          <a href="terms.html">Terms and Conditions</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <footer class="copy-rigth">
-    <small>&COPY; 2021 - Oca Web Technology</small>
-  </footer>
+  <oca-footer></oca-footer>
 
   <script src="js/index.js"></script>
 </body>
