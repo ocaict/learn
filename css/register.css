@@ -180,6 +180,19 @@ input[type="file"],
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 
+.disabled {
+  cursor: not-allowed;
+  background-color: lightgray;
+  color: darkgray;
+}
+
+.disabled:hover {
+  cursor: not-allowed;
+  background-color: lightgray;
+  color: darkgray;
+}
+
+
 @keyframes buttonEnter {
   from {
     width: 0%;

@@ -18,7 +18,8 @@ passportInput.addEventListener("change", (e) => {
   };
  }
 });
-// Import the functions you need from the SDKs you need
+
+/* // Import the functions you need from the SDKs you need
 // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js";
 // // TODO: Add SDKs for Firebase products that you want to use
@@ -39,7 +40,9 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 // firebase.analytics();
-const db = firebase.firestore();
+const db = firebase.firestore(); */
+
+
 
 const formInputs = Array.from(document.querySelectorAll("form .input"));
 let errorEles = Array.from(document.querySelectorAll(".error"));
@@ -47,6 +50,8 @@ const form = document.querySelector(".form");
 const course = document.querySelector("#courses");
 const password = document.querySelector("#password");
 const confirmpassword = document.querySelector("#password-confirm");
+const submitBtn = document.querySelector(".submitbtn");
+
 let isValid = false;
 
 let mainInputs;
@@ -155,8 +160,9 @@ confirmpassword.addEventListener("input", () => {
   confirmPasswodError.innerHTML = "";
 });
 
-form.addEventListener("submit", (e) => {
+ form.addEventListener("submit", (e) => {
   e.preventDefault();
+  indicator.innerHTML = ""
   if (isValid) {
     if (password.value !== confirmpassword.value) {
       confirmPasswodError.innerHTML = "Password Does not Match";
@@ -164,7 +170,8 @@ form.addEventListener("submit", (e) => {
       if (!course.value) {
         courseError.innerHTML = "Select Course";
       } else {
-        indicator.innerHTML = "Submitting...";
+        indicator.innerHTML = ""
+        submitBtn.value = "Submitting...";
         let data = {};
         mainInputs.forEach((input) => {
           data[input.name] = input.value;
@@ -174,11 +181,32 @@ form.addEventListener("submit", (e) => {
         // Add a new document with a generated id.
         let user = {
           ...data, passport,
-          course: course.value,
-          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+          course: course.value
+          // timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         }
-        console.log(user)
-        db.collection("students")
+          // Post Data Using Fetch Api
+              fetch('https://ocawebtech.herokuapp.com/', {
+              method: 'post',
+              headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(user)
+            }).then(res => res.json())
+              .then(res => {
+                if(res.success){
+                  indicator.innerHTML = "Your Data was submitted successully.."
+                  submitBtn.value = "Apply";
+                   clearInputs()
+                 
+                //   submitBtn.innerHTML = "Apply";
+                //  submitBtn.disabled = false
+                //  submitBtn.classList.remove("disabled")
+                }
+              });
+
+              
+        /* db.collection("students")
           .add(user)
           .then((docRef) => {
             console.log("Document written with ID: ", docRef.id);
@@ -190,11 +218,14 @@ form.addEventListener("submit", (e) => {
           })
           .catch((error) => {
             console.error("Error adding document: ", error);
-          });
+          }); */
       }
     }
     // window.location.href = "./contact.html"
   } else {
     console.log("Invalid");
   }
-});
+}); 
+
+
+

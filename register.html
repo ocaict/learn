@@ -7,9 +7,9 @@
     <title>Oca WebTech - Register</title>
     <link rel="stylesheet" href="css/register.css">
 
-    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <!-- <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script> -->
     <!-- <script src="./js/firebase.js"></script> -->
 
 </head>
@@ -17,115 +17,118 @@
 <body>
     <div class="form-bg">
         <div class="overlay">
-        <div class="form-container">
+            <div class="form-container">
 
-            <div class="header">
-                <a href="./index.html"><img src="./images/logo.png" class="logo" alt="Logo"></a>
-                <h2 class="title">Oca Web Technology</h2>
-            </div>
-            <!-- onsubmit="validateForm()" -->
-            <form class="form" action="http://localhost:3600/user/register" method="POST"
-                onsubmit="return validateForm()" autocomplete="off">
+                <div class="header">
+                    <a href="./index.html"><img src="./images/logo.png" class="logo" alt="Logo"></a>
+                    <h2 class="title">Oca Web Technology</h2>
+                </div>
+                <!-- onsubmit="validateForm()"  -->
+                <form class="form" method="POST" onsubmit="return validateForm()" autocomplete="off">
 
-                <div>
-                    <!-- <img src="" alt=""> -->
-                    <small style="text-align: center; padding: 10px;"> Choose Passport not More than 50kb</small>
-                    <label class="passport-label" for="passport"></label>
-                    <div class="file">
-                        <input id="passport" class="passport" type="file" accept="image/*" required>
+                    <div>
+                        <!-- <img src="" alt=""> -->
+                        <small style="text-align: center; padding: 10px;"> Choose Passport not More than 50kb</small>
+                        <label class="passport-label" for="passport"></label>
+                        <div class="file">
+                            <input id="passport" class="passport" type="file" accept="image/*" required>
+                        </div>
                     </div>
-                </div>
 
-                <div>
-                    <label for="firstname">First Name:</label>
-                    <small id="firstname-error" class="error"></small>
-                    <input class="input" id="firstname" type="text" name="firstname" placeholder="Doe" maxlength="15">
-                </div>
+                    <div>
+                        <label for="firstname">First Name:</label>
+                        <small id="firstname-error" class="error"></small>
+                        <input class="input" id="firstname" type="text" name="firstname" placeholder="Doe"
+                            maxlength="15">
+                    </div>
 
-                <div>
-                    <label for="lastname">Last Name:</label>
-                    <small id="lastname-error" class="error"></small>
-                    <input class="input" id="lastname" type="text" name="lastname" placeholder="John" maxlength="15">
-                </div>
+                    <div>
+                        <label for="lastname">Last Name:</label>
+                        <small id="lastname-error" class="error"></small>
+                        <input class="input" id="lastname" type="text" name="lastname" placeholder="John"
+                            maxlength="15">
+                    </div>
 
-                <div>
-                    <label for="username">User Name:</label>
-                    <small id="username-error" class="error"></small>
-                    <input class="input" id="username" type="text" name="username" placeholder="johndoe" maxlength="15">
-                </div>
+                    <div>
+                        <label for="username">User Name:</label>
+                        <small id="username-error" class="error"></small>
+                        <input class="input" id="username" type="text" name="username" placeholder="johndoe"
+                            maxlength="15">
+                    </div>
 
-                <div>
-                    <label for="email">Email:</label>
-                    <small id="email-error" class="error"></small>
-                    <input class="input" id="email" type="text" name="email" placeholder="johndoe@gmail.com"
-                        maxlength="89">
-                </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <small id="email-error" class="error"></small>
+                        <input class="input" id="email" type="text" name="email" placeholder="johndoe@gmail.com"
+                            maxlength="89">
+                    </div>
 
-                <div>
-                    <label for="password">Password:</label>
-                    <small id="pwd-st"></small>
-                    <small id="password-error" class="error"></small>
-                    <input class="input" id="password" type="password" name="password" maxlength="30"
-                        placeholder="*****">
-                </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <small id="pwd-st"></small>
+                        <small id="password-error" class="error"></small>
+                        <input class="input" id="password" type="password" name="password" maxlength="30"
+                            placeholder="*****">
+                    </div>
 
-                <div>
-                    <label for="password-confirm">Confirm Password:</label>
-                    <small id="password-confirm-error" class="error"></small>
-                    <input id="password-confirm" type="password" name="confirmpassword" maxlength="30"
-                        placeholder="*****">
-                </div>
-                <div>
+                    <div>
+                        <label for="password-confirm">Confirm Password:</label>
+                        <small id="password-confirm-error" class="error"></small>
+                        <input id="password-confirm" type="password" name="confirmpassword" maxlength="30"
+                            placeholder="*****">
+                    </div>
+                    <div>
 
-                    <label for="courses">Choose What you want to Learn:</label>
-                    <select id="courses">
+                        <label for="courses">Choose What you want to Learn:</label>
+                        <select id="courses">
 
-                        <option selected disabled value="">Select</option>
-                        <option value="Certificate in  Computer Application">Certificate in Computer Application
-                        </option>
-                        <option value="Word Processing(Ms Word)">Word processing(Ms Word)</option>
-                        <option value="MS Powerpoint">MS PowerPoint</option>
-                        <option value="MS Excel">SpreadSheet (MS Excel)</option>
-                        <option value="Desktop Publishing (DTP)">Desktop Publishing (MS Publisher) </option>
-                        <option value="MS Access">Database Management Systenm (MS Access)</option>
-                        <option value="CorelDraw Graphic Design">Graphic Design CorelDraw</option>
-                        <option value="Internet/Networking">Internet/NetWorking</option>
-                        <option value="Website Design (WordPress)">Web Design (WordPres CMS)</option>
-                        <option value="Web Development (HTML, CSS & JavaScript)">Web Development (HTML CSS and
-                            JavaScript)</option>
-                        <option value="BootStrap">CSS Library (BootStrap)</option>
-                        <option value="Modern JavaScript">Modern JavaScript Full Course</option>
-                        <option value="jQuery">JavaScript Library (jQuery)</option>
-                        <option value="Moodle LMS">Moodle LMS Training</option>
-                        <option value="Node JS">Node JS</option>
-                        <option value="PHP">PHP</option>
-                        <option value="SQL/MYSQL/SQLITE">RDBMS (SQL/MYSQL/SQLITE)</option>
-                        <option value="Mongodb">NO SQL DBMS (Mongodb/FireBase)</option>
-                        <option value="React"> JavaScript FrameWork (ReactJS)</option>
-                        <option value="React Native"> Mobile App Development with React Native</option>
-                        <option value="Ionic FrameWork">Mobile App Development with Ionic FrameWork</option>
-                        <option value="Capacitor/Cordova"> Mobile App Develoment with Capacitor/Cordova</option>
-                        <option value="Electron"> Desktop App Development with ElectronJS</option>
-                        <option value="eLearning Design">eLearning Design with (Captivate/Articulate/Lectora)</option>
+                            <option selected disabled value="">Select</option>
+                            <option value="Certificate in  Computer Application">Certificate in Computer Application
+                            </option>
+                            <option value="Word Processing(Ms Word)">Word processing(Ms Word)</option>
+                            <option value="MS Powerpoint">MS PowerPoint</option>
+                            <option value="MS Excel">SpreadSheet (MS Excel)</option>
+                            <option value="Desktop Publishing (DTP)">Desktop Publishing (MS Publisher) </option>
+                            <option value="MS Access">Database Management Systenm (MS Access)</option>
+                            <option value="CorelDraw Graphic Design">Graphic Design CorelDraw</option>
+                            <option value="Internet/Networking">Internet/NetWorking</option>
+                            <option value="Website Design (WordPress)">Web Design (WordPres CMS)</option>
+                            <option value="Web Development (HTML, CSS & JavaScript)">Web Development (HTML CSS and
+                                JavaScript)</option>
+                            <option value="BootStrap">CSS Library (BootStrap)</option>
+                            <option value="Modern JavaScript">Modern JavaScript Full Course</option>
+                            <option value="jQuery">JavaScript Library (jQuery)</option>
+                            <option value="Moodle LMS">Moodle LMS Training</option>
+                            <option value="Node JS">Node JS</option>
+                            <option value="PHP">PHP</option>
+                            <option value="SQL/MYSQL/SQLITE">RDBMS (SQL/MYSQL/SQLITE)</option>
+                            <option value="Mongodb">NO SQL DBMS (Mongodb/FireBase)</option>
+                            <option value="React"> JavaScript FrameWork (ReactJS)</option>
+                            <option value="React Native"> Mobile App Development with React Native</option>
+                            <option value="Ionic FrameWork">Mobile App Development with Ionic FrameWork</option>
+                            <option value="Capacitor/Cordova"> Mobile App Develoment with Capacitor/Cordova</option>
+                            <option value="Electron"> Desktop App Development with ElectronJS</option>
+                            <option value="eLearning Design">eLearning Design with (Captivate/Articulate/Lectora)
+                            </option>
 
-                    </select>
-                    <small id="course-error" class="error"></small>
-                </div>
+                        </select>
+                        <small id="course-error" class="error"></small>
+                    </div>
 
 
-                <!-- 
+                    <!-- 
                 <div>
                     <label for="age">Age:</label>
                     <small id="age-error" class="error"></small>
                     <input id="age" type="number" name="age" placeholder="20" maxlength="3">
                 </div> -->
 
-                <input class="submitbtn" type="submit" value="Apply" style="border: 0px;">
+                    <input class="submitbtn" type="submit" value="Apply" style="border: 0px;">
 
-                <div class="indicator"></div>
-            </form>
+                    <div class="indicator"></div>
+                </form>
+            </div>
         </div>
-    </div>
     </div>
 
     <script src="./js/register.js" defer></script>
