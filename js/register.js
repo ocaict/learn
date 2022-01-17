@@ -161,7 +161,7 @@ confirmpassword.addEventListener("input", () => {
           // timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         }
           // Post Data Using Fetch Api
-              fetch('https://ocawebtech.herokuapp.com/', {
+              fetch('http://localhost:3600/', {
               method: 'post',
               headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -174,7 +174,7 @@ confirmpassword.addEventListener("input", () => {
                   indicator.innerHTML = res.msg
                   submitBtn.value = "Apply";
                    clearInputs()
-                   window.location.href = `/profile.html?firstname=${user.firstname}`;
+                   window.location.href = `/login.html`;
                 //   submitBtn.innerHTML = "Apply";
                 //  submitBtn.disabled = false
                 //  submitBtn.classList.remove("disabled")
