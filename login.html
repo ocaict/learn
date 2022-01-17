@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oca WebTech - Register</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="form-bg">
+        <div class="overlay">
+            <div class="form-container">
+
+                <div class="header">
+                    <a href="./index.html"><img src="./images/logo.png" class="logo" alt="Logo"></a>
+                    <h2 class="title">Oca Web Technology</h2>
+                </div>
+                <!-- onsubmit="validateForm()"  -->
+                <form class="form" method="POST" onsubmit="return validateForm()" autocomplete="off">
+                    <div>
+                        <label for="email">Email:</label>
+                        <small id="email-error" class="error"></small>
+                        <input class="input" id="email" type="text" name="email" placeholder="johndoe@gmail.com"
+                            maxlength="89">
+                    </div>
+
+                    <div>
+                        <label for="password">Password:</label>
+                        <small id="pwd-st"></small>
+                        <small id="password-error" class="error"></small>
+                        <input class="input" id="password" type="password" name="password" maxlength="30"
+                            placeholder="*****">
+                    </div>
+
+                    <input class="submitbtn" type="submit" value="Login" style="border: 0px;">
+                    <small class="indicator"></small>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/login.js" defer></script>
+</body>
+
+</html>

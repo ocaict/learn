@@ -78,10 +78,12 @@ p a {
   /* background-color: lightblue; */
   padding: 20px 0;
 }
+
 h3 {
   padding: 20px 0;
   font-size: 1.8rem;
 }
+
 form {
   margin: 0 auto;
   background-color: rgb(234, 241, 241);
@@ -136,4 +138,8 @@ form .submit-btn {
   background-color: royalblue;
   color: white;
   cursor: pointer;
+}
+
+.subtitle {
+  font-size: 18px;
 }

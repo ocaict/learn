@@ -103,7 +103,7 @@ headerTemplate.innerHTML = `
         }
         
         .header .menu-btn:checked~.menu {
-            max-height: 300px;
+            max-height: 400px;
         }
         
         
@@ -173,6 +173,9 @@ headerTemplate.innerHTML = `
         </li>
         <li>
           <a class="logn-link" href="register.html"> Apply</a>
+        </li>
+        <li>
+          <a class="logn-link" href="login.html">Login</a>
         </li>
       </ul>
         </header>

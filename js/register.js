@@ -19,30 +19,6 @@ passportInput.addEventListener("change", (e) => {
  }
 });
 
-/* // Import the functions you need from the SDKs you need
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
-// import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js";
-// // TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyA9PIIdbqPAE3Vyay5L9BJpcdsj-OZLSYE",
-  authDomain: "oca-media-app.firebaseapp.com",
-  projectId: "oca-media-app",
-  storageBucket: "oca-media-app.appspot.com",
-  messagingSenderId: "494641529596",
-  appId: "1:494641529596:web:c1addb417879f996144d79",
-  measurementId: "G-EQWXZEJHDS",
-};
-
-// Initialize Firebase
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-// firebase.analytics();
-const db = firebase.firestore(); */
-
-
 
 const formInputs = Array.from(document.querySelectorAll("form .input"));
 let errorEles = Array.from(document.querySelectorAll(".error"));
@@ -119,7 +95,7 @@ function validateName(nameEle) {
         isValid = false;
         showInputError(
           errorEles[4],
-          "Password must have be at least 6 characters with atleast 1 uppercase letter, special chareter and number"
+          "Password must  be least 6 characters with at least 1 uppercase letter, special chareter and number"
         );
       }
       break;
@@ -185,7 +161,7 @@ confirmpassword.addEventListener("input", () => {
           // timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         }
           // Post Data Using Fetch Api
-              fetch('https://ocawebtech.herokuapp.com/', {
+              fetch('http://localhost:3600/', {
               method: 'post',
               headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -195,13 +171,16 @@ confirmpassword.addEventListener("input", () => {
             }).then(res => res.json())
               .then(res => {
                 if(res.success){
-                  indicator.innerHTML = "Your Data was submitted successully.."
+                  indicator.innerHTML = res.msg
                   submitBtn.value = "Apply";
                    clearInputs()
-                 
+                   window.location.href = `/profile.html?firstname=${user.firstname}`;
                 //   submitBtn.innerHTML = "Apply";
                 //  submitBtn.disabled = false
                 //  submitBtn.classList.remove("disabled")
+                }else{
+                  indicator.innerHTML = res.msg
+                  submitBtn.value = "Apply";
                 }
               });
 
@@ -226,6 +205,10 @@ confirmpassword.addEventListener("input", () => {
     console.log("Invalid");
   }
 }); 
+
+  // Post Data Using Fetch Api ActivePresenter
+// Send Data to MyDB
+
 
 
 

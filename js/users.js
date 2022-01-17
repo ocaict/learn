@@ -1,3 +1,17 @@
+let login = false
+let id = ""
+
+window.onload = function() {
+    const params = new URLSearchParams(window.location.search)
+    login = params.get("login")
+    email = params.get("email")
+    getUsers(email)
+    // similar behavior as an HTTP redirect
+    if(!login) {
+        window.location.replace("/login.html");
+    }
+}
+
 const listOuput = document.querySelector(".list")
 listOuput.innerHTML = "<h2> Loading...</h2>"
 
@@ -13,10 +27,10 @@ const displayUsers = (users) => {
         </div>
 
         <div class="userdetails">
-            <h2>Username: ${user.username}</h2>
-            <h3>Name: ${user.firstname} ${user.lastname}</h3>
-            <h3>Email: ${user.email}</h3>
-            <h2>Course: ${user.course}</h2>
+            <p>Username: ${user.username}</p>
+            <p>Name: ${user.firstname} ${user.lastname}</p>
+            <p>Email: ${user.email}</p>
+            <p>Course: ${user.course}</p>
         </div>
     </div>
         
@@ -27,12 +41,12 @@ const displayUsers = (users) => {
 }
 
 
-const getUsers = () => {
-    fetch("https://ocawebtech.herokuapp.com/student")
+const getUsers = (email) => {
+    fetch("http://localhost:3600/students")
     .then(data => data.json())
     .then(users => {
-        displayUsers(users)
+        let user = users.filter(user => user.email == email)
+        displayUsers(user)
     })
 }
 
-getUsers()
