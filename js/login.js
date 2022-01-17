@@ -15,7 +15,7 @@ formInputs.forEach(input => {
         user[input.name] = input.value
 
          // Post Data Using Fetch Api
-     fetch('http://localhost:3600/login', {
+     fetch('https://ocawebtech.herokuapp.com/login', {
         method: 'post',
         headers: {
           'Accept': 'application/json, text/plain, */*',
