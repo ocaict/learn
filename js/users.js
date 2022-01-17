@@ -42,7 +42,7 @@ const displayUsers = (users) => {
 
 
 const getUsers = (email) => {
-    fetch("http://localhost:3600/students")
+    fetch("https://ocawebtech.herokuapp.com/students")
     .then(data => data.json())
     .then(users => {
         let user = users.filter(user => user.email == email)
