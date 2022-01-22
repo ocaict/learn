@@ -161,7 +161,7 @@ confirmpassword.addEventListener("input", () => {
           // timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         }
           // Post Data Using Fetch Api
-              fetch('http://localhost:3600/', {
+              fetch('https://ocawebtech.herokuapp.com/', {
               method: 'post',
               headers: {
                 'Accept': 'application/json, text/plain, */*',
