@@ -186,7 +186,12 @@ confirmpassword.addEventListener("input", () => {
                   submitBtn.value = "Apply";
                 }
               })
-              .catch(err => console.log(err))
+              .catch(err =>{ 
+                indicator.innerHTML = "Unable to proccess your request,  pls tyr again"
+                submitBtn.disabled = false
+                submitBtn.value = "Apply";
+                console.log(err)
+              })
       }
     }
   } else {
