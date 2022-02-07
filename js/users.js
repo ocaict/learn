@@ -22,7 +22,7 @@ const displayUsers = (users) => {
     users.map(user => {
         html += `
       <div class="person-container">
-      <h2>Name: ${user.firstname} ${user.lastname} Profile</h2>
+      <h2>${user.firstname} ${user.lastname} Profile</h2>
         <div class="person">
            
         <div class="image">
