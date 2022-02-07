@@ -169,7 +169,7 @@ confirmpassword.addEventListener("input", () => {
             }).then(res => res.json())
               .then(res => {
                 if(res.success){
-                  localStorage.setItem("ocaSignUpEmail", user.email)
+                  localStorage.setItem("userEmail", user.email)
                   console.log(res)
                   indicator.innerHTML = res.msg
                   submitBtn.disabled = false
