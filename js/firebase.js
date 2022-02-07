@@ -101,8 +101,9 @@ signInWithEmailLink(auth, email, window.location.href)
 const displayUserDetails = (user) => {
 let html = `<div class="card">
 <img src="${user.passport}" alt="">
-<p> Hi ${user.firstname}, your email <span class="email">${user.email}</span> have been verified succecceffully</p>
-<p>You can head Oca Business & Computer Training Academy to complete your registration process.</p>
+<p> Hi ${user.firstname}, your email <span class="email">${user.email}</span> have been verified succecceffully.</p>
+<p>You can head to Oca Business Center & Computer Training Academy to complete your registration process.</p>
+
 </div>
 `
 userContainer.innerHTML = html
