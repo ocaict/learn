@@ -31,7 +31,7 @@ if (isSignInWithEmailLink(auth, window.location.href)) {
   // the sign-in operation.
   // Get the email if available. This should be available if the user completes
   // the flow on the same device where they started it.
-  let email = window.localStorage.getItem('ocaSignUpEmail');
+  let email = window.localStorage.getItem('userEmail');
   if (!email) {
     // User opened the link on a different device. To prevent session fixation
     // attacks, ask the user to provide the associated email again. For example:
@@ -70,7 +70,7 @@ signInWithEmailLink(auth, email, window.location.href)
                     .then(res => {
                         if(res.success){
                             displayUserDetails(verifiedUser[0])
-                        window.localStorage.removeItem('ocaSignUpEmail');
+                        window.localStorage.removeItem('userEmail');
                         window.localStorage.setItem('verified', true);
 
 

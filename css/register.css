@@ -240,6 +240,16 @@ input[type="file"],
   color: salmon;
 }
 
+
+.after-registration-container {
+  display: none;
+  text-align: center;
+}
+
+.after-registration-container .header {
+  background-color: inherit;
+}
+
 @keyframes buttonEnter {
   from {
     width: 0%;

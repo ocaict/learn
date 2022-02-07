@@ -1,3 +1,6 @@
+let userContainer = document.querySelector(".user");
+let formContainer = document.querySelector(".form-container");
+let afterContainer = document.querySelector(".after-registration-container");
 let passportInput = document.querySelector(".passport");
 let passport = "";
 passportInput.addEventListener("change", (e) => {
@@ -175,11 +178,12 @@ confirmpassword.addEventListener("input", () => {
                   submitBtn.disabled = false
                   submitBtn.value = "Apply";
                    clearInputs()
+                   userContainer.innerHTML = user.firstname
+                  formContainer.style.display = "none"
+                  afterContainer.style.display = "block"
 
-                  //  window.location.href = `/login.html`;
-                //   submitBtn.innerHTML = "Apply";
-                //  submitBtn.disabled = false
-                //  submitBtn.classList.remove("disabled")
+
+
                 }else{
                   indicator.innerHTML = res.msg
                   submitBtn.disabled = false
