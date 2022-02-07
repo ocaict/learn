@@ -184,7 +184,6 @@ confirmpassword.addEventListener("input", () => {
                   indicator.innerHTML = res.msg
                   submitBtn.disabled = false
                   submitBtn.value = "Apply";
-                    console.log(res)
                 }
               })
               .catch(err => console.log(err))
