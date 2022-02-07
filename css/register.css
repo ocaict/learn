@@ -240,6 +240,18 @@ input[type="file"],
   color: salmon;
 }
 
+.form-link {
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.form-link a {
+  font-size: 1rem;
+  color: darkcyan;
+  padding-left: 10px;
+  text-decoration: none;
+}
 
 .after-registration-container {
   display: none;
