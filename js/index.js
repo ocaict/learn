@@ -10,7 +10,7 @@ function toHex(value) {
 }
 var colorBegin = "#DC143C";
 var colorEnd = "#3CB371";
-var text = "Welcome to Oca Web Technology";
+var text = "Oca WebTech";
 var r = parseInt(colorBegin.substring(1, 3), 16);
 var g = parseInt(colorBegin.substring(3, 5), 16);
 var b = parseInt(colorBegin.substring(5, 7), 16);
@@ -38,7 +38,7 @@ for (var x = 0; x <= text.length; x++) {
 document.getElementById("title").innerHTML = html;
 
 var data =
-  "Web Development^Web Application Development^eLearning Development^Mobile & Desktop Application";
+  "Web Development^PWA Development^eLearning Development^Mobile & Desktop App Development";
 var lines = data.split("^");
 var reverse = false;
 var index = 0;

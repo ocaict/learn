@@ -2,6 +2,10 @@ body {
     text-align: center;
 }
 
+.container {
+    padding: 70px 0;
+}
+
 .image img {
     width: 80px;
     height: 80px;
@@ -12,15 +16,32 @@ body {
 
 .person {
     max-width: 500px;
-    margin: auto;
+    margin: 20px auto;
     box-shadow: 0px 3px 4px 4px rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 20px;
     display: flex;
+    position: relative;
 }
 
 .userdetails p {
     text-align: left;
     font-size: 18px;
     margin-bottom: 5px;
+}
+
+.person a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: inherit;
+
+}
+
+.error {
+    color: red;
 }

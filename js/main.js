@@ -151,7 +151,7 @@ headerTemplate.innerHTML = `
         </style>
 
         <header class="header">
-                <a href="/" class="logo">Oca WebTech</a>
+                <a href="/" class="logo">OcaWebTech</a>
                 <input type="checkbox" class="menu-btn" id="menu-btn">
                 <label for="menu-btn" class="menu-icon"> <span class="nav-icon"></span></label>
 
@@ -170,6 +170,9 @@ headerTemplate.innerHTML = `
 
         <li>
           <a href="contact.html"> Contact</a>
+        </li>
+        <li>
+          <a href="videos.html">Videos</a>
         </li>
         <li>
           <a class="logn-link" href="register.html"> Apply</a>

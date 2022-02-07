@@ -104,14 +104,15 @@ form {
 
 .form-group label,
 .textarea label {
-  font-size: 1.2rem;
+  color: #666;
+  font-size: 1.1rem;
   margin-top: 5px;
   /* width: 100%; */
 }
 
 .form-group input,
 .textarea textarea {
-  width: 80%;
+  width: 100%;
   border: none;
   outline: none;
   padding: 5px 10px;

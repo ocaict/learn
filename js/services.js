@@ -1,8 +1,8 @@
 var messages = new Array
 (
-   'Welcome to Oca Webt Technology!',
-   'Learn Web Development (HTML5, CSS3 & Javascript)',
-   'Build and Deploy eLearning'
+   'Welcome to OcaWebTech!',
+   'Learn Web Development from Scratch (HTML5, CSS3 & Javascript)',
+   'Build and Deploy eLearning Contents'
 );
 var speed = 80;
 var currentMsg = 0;
