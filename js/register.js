@@ -1,25 +1,26 @@
+
 let userContainer = document.querySelector(".user");
 let formContainer = document.querySelector(".form-container");
 let afterContainer = document.querySelector(".after-registration-container");
 let passportInput = document.querySelector(".passport");
 let passport = "";
 passportInput.addEventListener("change", (e) => {
-    let file = e.target.files[0];
-    let size = (file.size / 1024 / 1024).toFixed(2)
-   if(size > 0.05){
-     alert("Image too Big to be uploaded..")
-   }else{
+  let file = e.target.files[0];
+  let size = (file.size / 1024 / 1024).toFixed(2)
+  if (size > 0.05) {
+    alert("Image too Big to be uploaded..")
+  } else {
     let fileReader = new FileReader();
-  
+
     fileReader.readAsDataURL(file);
-  
+
     fileReader.onload = (e) => {
       let result = e.target.result;
       passport = result
-      document.querySelector(".passport-label").style.backgroundImage = "url("+result+")"
-  
+      document.querySelector(".passport-label").style.backgroundImage = "url(" + result + ")"
+
     };
-   }
+  }
 });
 
 const formInputs = Array.from(document.querySelectorAll("form .input"));
@@ -139,7 +140,7 @@ confirmpassword.addEventListener("input", () => {
 });
 
 // Form Event
- form.addEventListener("submit", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   indicator.innerHTML = ""
   if (isValid) {
@@ -156,103 +157,148 @@ confirmpassword.addEventListener("input", () => {
         mainInputs.forEach((input) => {
           data[input.name] = input.value;
         });
-        
+
         let user = {
-          ...data, password2: confirmpassword.value,course: course.value, passport
-          
+          ...data, password2: confirmpassword.value, course: course.value, passport
+
         }
-          // Post Data Using Fetch Api
-              fetch('https://ocawebtech.herokuapp.com/', {
-              method: 'post',
-              headers: {
-                'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(user)
-            }).then(res => res.json())
-              .then(res => {
-                if(res.success){
-                  localStorage.setItem("userEmail", user.email)
-                  console.log(res)
-                  indicator.innerHTML = res.msg
-                  submitBtn.disabled = false
-                  submitBtn.value = "Apply";
-                   clearInputs()
-                   userContainer.innerHTML = user.firstname
-                  formContainer.style.display = "none"
-                  afterContainer.style.display = "block"
+        // Post Data Using Fetch Api
+        fetch('https://ocawebtech.herokuapp.com/', {
+          method: 'post',
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(user)
+        }).then(res => res.json())
+          .then(res => {
+            if (res.success) {
+              localStorage.setItem("userEmail", user.email)
+              console.log(res)
+              indicator.innerHTML = res.msg
+              submitBtn.disabled = false
+              submitBtn.value = "Apply";
+              clearInputs()
+              userContainer.innerHTML = user.firstname
+              formContainer.style.display = "none"
+              afterContainer.style.display = "block"
 
 
 
-                }else{
-                  indicator.innerHTML = res.msg
-                  submitBtn.disabled = false
-                  submitBtn.value = "Apply";
-                }
-              })
-              .catch(err =>{ 
-                indicator.innerHTML = "Unable to proccess your request,  pls tyr again"
-                submitBtn.disabled = false
-                submitBtn.value = "Apply";
-                console.log(err)
-              })
+            } else {
+              indicator.innerHTML = res.msg
+              submitBtn.disabled = false
+              submitBtn.value = "Apply";
+            }
+          })
+          .catch(err => {
+            indicator.innerHTML = "Unable to proccess your request,  Pls Try Again"
+            submitBtn.disabled = false
+            submitBtn.value = "Apply";
+            console.log(err)
+          })
       }
     }
   } else {
     console.log("Invalid");
   }
-}); 
+});
 
+
+// Select Logics
+
+let courseDetailsContainer = document.querySelector(".course-details-container");
+let courseDetails = document.querySelector(".course-details");
+let popOverlay = document.querySelector(".pop-overlay");
 const courseOptions = document.querySelector("#courses")
-const courseRequirmentOutput = document.querySelector(".requirements")
-courseOptions.addEventListener("change", (e) => {
-let value = e.target.value
-  switch (value) {
-    case "PHP":
-      loadDetails(value)
-      courseRequirmentOutput.style.display = "block"
-     courseRequirmentOutput.innerHTML =  displayCourseDetails(value, "HTML, CSS, and JS", "Computer with Internet Access", "12,000")
-      break;
-      case "Certificate In  Computer Application":
-        courseRequirmentOutput.style.display = "block"
-        courseRequirmentOutput.innerHTML =  displayCourseDetails(value, "No Skill Required", "Spirit of Learning from Scratch", "15,000")
-        break;
-      case "Word Processing(Ms Word)":
-        courseRequirmentOutput.style.display = "block"
-        courseRequirmentOutput.innerHTML =  displayCourseDetails(value, "Basic of Computer", "Spirit of Learning from Scratch", "10,000")
-        break;
-      case "Desktop Publishing (DTP)":
-        courseRequirmentOutput.style.display = "block"
-        courseRequirmentOutput.innerHTML =  displayCourseDetails(value, "Basic of Computer", "Spirit of Learning from Scratch", "10,000")
-        break;
+const detailsBtn = document.querySelector(".show-details")
+const topics = document.querySelector(".topics")
+const closeBtn = document.querySelector(".close-btn")
 
+
+courseOptions.addEventListener("change", (e) => {
+  let value = e.target.value
+  console.log(value)
+  let { title, requirements, topics, participants, price } = courseArray.filter(c => c.title == value)[0]
+
+
+  switch (value) {
+    case value:
+      populateDetails(title, participants, requirements, topics, price)
+      break;
     default:
       break;
   }
-  console.log(e.target.value)
 })
-  
 
 
 
-const displayCourseDetails = (course, l1, l2, cost) => {
+
+
+const populateDetails = (course, participants, listArray, topics, cost) => {
+  detailsBtn.style.display = "block"
+  courseDetails.innerHTML = displayCourseDetails(course, participants, listArray, topics, cost)
+}
+const displayCourseDetails = (course, participants, listArray, topics, cost) => {
+  let list = listArray.map(li => {
+    return `<li>${li}</li>`
+  }).join("")
+
+  let topic = topics.map(li => {
+    return `<li>${li}</li>`
+  }).join("")
+
+  let participant = participants.map(li => {
+    return `<li>${li}</li>`
+  }).join("")
+
   return `
-      <div>
-            <h4>Basic Requirments for:  <span class="choosen">${course}</span></h4>
-            <ul class="list">
-                <li>${l1}</li>
-                <li>${l2}</li>
-                <li>Costs: &#8358;${cost}</li>
-                <!-- <button> View What you will Learn </button> -->
-                <a href="/contact.html">Get In Touch for More Info</a>
+        <div class="main">
+            <div class="requirements">
+            <h2> ${course}</h2>
+
+              <div>
+              <br>
+              <h3> Target Audience. </h3>
+              <ul>
+             ${participant}
+              </ul>
+               </div>
+            <br>
+                <h3>Basic Requirments.</h3>
+
+                <ul class="list">
+                ${list}
             </ul>
-        </div>
+          </div>
+          <div class="topics">
+                <h3>What you will learn</h3>
+                <ul>
+                ${topic}
+                </ul class="list">
+                <h2 class="cost">Costs: &#8358;${cost}</h2>
+                <button class="btn btn-success" onclick="hidePopUp()">Continue</button>
+
+          </div>
+      </div>
   `
+}
+detailsBtn.addEventListener("click", () => {
+  submitBtn.classList.add("hide")
+  popOverlay.style.display = "block"
+  courseDetailsContainer.classList.add("top")
+})
+closeBtn.addEventListener("click", () => {
+  popOverlay.style.display = "none"
+  courseDetailsContainer.classList.remove("top")
+})
+const hidePopUp = () => {
+  popOverlay.style.display = "none"
+  courseDetailsContainer.classList.remove("top")
+  submitBtn.classList.remove("hide")
+
 }
 
 
-const loadDetails = (course) => {
-  console.log(course)
-} 
 
 

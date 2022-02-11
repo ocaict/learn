@@ -1,5 +1,5 @@
-let favicon = `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">`;
 
+// Nav Area
 const headerTemplate = document.createElement("template");
 headerTemplate.innerHTML = `
         <style>
@@ -103,7 +103,7 @@ headerTemplate.innerHTML = `
         }
         
         .header .menu-btn:checked~.menu {
-            max-height: 400px;
+            max-height: 100%;
         }
         
         
@@ -151,7 +151,7 @@ headerTemplate.innerHTML = `
         </style>
 
         <header class="header">
-                <a href="/" class="logo">OcaWebTech</a>
+                <a href="/" class="logo" style="font-size:28px;">OcaWebTech</a>
                 <input type="checkbox" class="menu-btn" id="menu-btn">
                 <label for="menu-btn" class="menu-icon"> <span class="nav-icon"></span></label>
 

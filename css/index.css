@@ -17,10 +17,57 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.header .logo {
+    font-size: 28px;
+}
+
 a {
     text-decoration: none;
     font-size: 16px;
 }
+
+.btn {
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 10px auto;
+    display: block;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .4s;
+
+}
+
+.btn:hover {
+    background-color: lightblue;
+}
+
+.btn-primary {
+    background-color: blue;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: red;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: darkcyan;
+    color: #fff;
+}
+
+.btn-warning {
+    background-color: orangered;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: initial;
+    color: black;
+}
+
 
 h1 {
     font-size: 30px;

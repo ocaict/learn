@@ -21,9 +21,9 @@
                 <!-- onsubmit="validateForm()"  -->
                 <form class="form" method="POST" onsubmit="return validateForm()" autocomplete="off">
 
-                    <div>
+                    <div class="profile-img-container">
                         <!-- <img src="" alt=""> -->
-                        <small style="text-align: center; padding: 10px;"> Choose Passport not More than 50kb</small>
+                        <label class="profile-label"> Choose Passport not More than 50kb</label>
                         <label class="passport-label" for="passport">
                             <div class="file">
                                 <input id="passport" class="passport" type="file" name="passport"
@@ -33,6 +33,45 @@
                         </label>
 
                     </div>
+
+                    <!-- Select Course -->
+                     <div>
+                        <label for="courses">Choose What you want to Learn:</label>
+                        <select id="courses" name="course">
+                            <option selected disabled value="">Select</option>
+                            <option value="Certificate In  Computer Application">Certificate in Computer Application
+                            </option>
+                            <option value="Word Processing(Ms Word)">Word processing(Ms Word)</option>
+                            <option value="Presentation (MS Powerpoint)"> Presentation (MS PowerPoint)</option>
+                            <option value="SpreadSheet (MS Excel)">SpreadSheet (MS Excel)</option>
+                            <option value="Desktop Publishing (DTP)">Desktop Publishing (MS Publisher) </option>
+                            <option value="Database Management Systenm (MS Access)">Database Management Systenm (MS
+                                Access)</option>
+                            <option value="CorelDraw Graphic Design">Graphic Design CorelDraw</option>
+                            <option value="Internet/Networking">Internet/NetWorking</option>
+                            <option value="Website Design (WordPress CMS)">Web Design (WordPress CMS)</option>
+                            <option value="Moodle LMS">Moodle LMS Training</option>
+                            <option value="Web Development (HTML, CSS & JavaScript)">Web Development (HTML CSS and
+                                JavaScript)</option>
+                            <option value="CSS Library (BootStrap)">CSS Library (BootStrap)</option>
+                            <option value="Modern JavaScript (ES6+)">Modern JavaScript (ES6+)</option>
+                            <option value="jQuery">JavaScript Library (jQuery)</option>
+                            <option value="Node JS">Node JS</option>
+                            <option value="PHP">PHP</option>
+                            <option value="SQL/MYSQL/SQLITE">RDBMS (SQL/MYSQL/SQLITE)</option>
+                            <option value="Mongodb/Firebase Firestore">NO SQL DBMS (Mongodb/FireBase)</option>
+                            <option value="React JS"> JavaScript FrameWork (ReactJS)</option>
+                            <option value="React Native"> Mobile App Development with React Native</option>
+                            <option value="Ionic FrameWork">Mobile App Development with Ionic FrameWork</option>
+                            <option value="Capacitor/Cordova"> Mobile App Develoment with Capacitor/Cordova</option>
+                            <option value="Electron JS"> Desktop App Development with ElectronJS</option>
+                            <option value="eLearning Design/Development">eLearning Design/Development</option>
+                        </select>
+                        <button type="button" class="btn btn-success show-details">Show Details</button>
+                        <small id="course-error" class="error"></small>
+                    </div>
+
+                    <!-- End of Select -->
 
                     <div>
                         <label for="firstname">First Name:</label>
@@ -76,48 +115,34 @@
                         <input id="password-confirm" type="password" name="confirmpassword" maxlength="30"
                             placeholder="*****">
                     </div>
-                    <div>
-                        <label for="courses">Choose What you want to Learn:</label>
-                        <select id="courses" name="course">
-                            <option selected disabled value="">Select</option>
-                            <option value="Certificate In  Computer Application">Certificate in Computer Application
-                            </option>
-                            <option value="Word Processing(Ms Word)">Word processing(Ms Word)</option>
-                            <option value=" Presentation (MS Powerpoint)"> Presentation(MS PowerPoint)</option>
-                            <option value="SpreadSheet (MS Excel)">SpreadSheet (MS Excel)</option>
-                            <option value="Desktop Publishing (DTP)">Desktop Publishing (MS Publisher) </option>
-                            <option value="Database Management Systenm (MS Access)">Database Management Systenm (MS
-                                Access)</option>
-                            <option value="CorelDraw Graphic Design">Graphic Design CorelDraw</option>
-                            <option value="Internet/Networking">Internet/NetWorking</option>
-                            <option value="Website Design (WordPress CMS)">Web Design (WordPress CMS)</option>
-                            <option value="Moodle LMS">Moodle LMS Training</option>
-                            <option value="Web Development (HTML, CSS & JavaScript)">Web Development (HTML CSS and
-                                JavaScript)</option>
-                            <option value="CSS Library (BootStrap)">CSS Library (BootStrap)</option>
-                            <option value="Modern JavaScript">Modern JavaScript Full Course</option>
-                            <option value="jQuery">JavaScript Library (jQuery)</option>
-                            <option value="Node JS">Node JS</option>
-                            <option value="PHP">PHP</option>
-                            <option value="SQL/MYSQL/SQLITE">RDBMS (SQL/MYSQL/SQLITE)</option>
-                            <option value="Mongodb/Firebase Firestore">NO SQL DBMS (Mongodb/FireBase)</option>
-                            <option value="React JS"> JavaScript FrameWork (ReactJS)</option>
-                            <option value="React Native"> Mobile App Development with React Native</option>
-                            <option value="Ionic FrameWork">Mobile App Development with Ionic FrameWork</option>
-                            <option value="Capacitor/Cordova"> Mobile App Develoment with Capacitor/Cordova</option>
-                            <option value="Electron"> Desktop App Development with ElectronJS</option>
-                            <option value="eLearning Design/Development">eLearning Design/Development</option>
-                        </select>
-                        <small id="course-error" class="error"></small>
-                    </div>
-                    <input class="submitbtn" type="submit" value="Apply" style="border: 0px;">
+                   
+                    <button class="btn btn-success submitbtn hide" type="submit" style="border: 0px;"> Apply </button>
 
                     <div class="indicator"></div>
                 </form>
                 <h4 class="form-link">Have Account? <a href="/login.html">Log In</a></h4>
+                <!-- Show Course Details -->
+                        <div class="pop-overlay"></div>
+                    <div class="course-details-container">
+                        <button class="close-btn btn btn-danger">Close</button>
+                            <div class="main course-details">
 
-                <div class="requirements">
-                </div>
+                            </div>
+                        <!-- <div class="">
+                            <div class="requirements">
+
+                            </div>
+                        <div class="topics">
+
+                        <h2>What you will learn</h2>
+                        <ul>
+                        <li>Lorem ilisum dolor sit amet consectetur adiliisicing elit. Quidem, iste!</li>
+                        </ul>
+                        </div>
+
+                        </div> -->
+                    </div>
+                
             </div>
 
             <!-- Display After Registration -->
@@ -133,6 +158,7 @@
         </div>
 
     </div>
+    <script src="./js/course-details.js" defer></script>
     <script src="./js/register.js" defer></script>
 </body>
 
