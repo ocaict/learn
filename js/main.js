@@ -127,6 +127,8 @@ headerTemplate.innerHTML = `
         }
         
         @media (min-width: 900px) {
+
+           
             .header li {
                 float: left;
             }
@@ -151,7 +153,8 @@ headerTemplate.innerHTML = `
         </style>
 
         <header class="header">
-                <a href="/" class="logo" style="font-size:28px;">OcaWebTech</a>
+                <a href="/" class="logo" style="font-size:28px;"><img width="40" height="40" src="./images/logo.png" alt="Oca"></a>
+
                 <input type="checkbox" class="menu-btn" id="menu-btn">
                 <label for="menu-btn" class="menu-icon"> <span class="nav-icon"></span></label>
 
@@ -344,8 +347,8 @@ footer {
             <h3>Social Contact</h3>
             <a href="https://web.facebook.com/ocawebtech" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.youtube.com/channel/UCZ6ZasPc2Pw4oV8-bxS0RuA" target="_blank"> <i
-                class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+                class="fas fa-youtube"></i></a>
+            <a href="#"><i class="fas fa-twitter"></i></a>
     
           </div>
     
