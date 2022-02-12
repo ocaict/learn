@@ -217,8 +217,8 @@ const closeBtn = document.querySelector(".close-btn")
 
 
 courseOptions.addEventListener("change", (e) => {
+  submitBtn.classList.add("hide")
   let value = e.target.value
-  console.log(value)
   let { title, requirements, topics, participants, price } = courseArray.filter(c => c.title == value)[0]
 
 
