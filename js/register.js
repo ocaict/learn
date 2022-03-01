@@ -3,7 +3,9 @@ let userContainer = document.querySelector(".user");
 let formContainer = document.querySelector(".form-container");
 let afterContainer = document.querySelector(".after-registration-container");
 let passportInput = document.querySelector(".passport");
+// Passport Logics
 let passport = "";
+let cost;
 passportInput.addEventListener("change", (e) => {
   let file = e.target.files[0];
   let size = (file.size / 1024 / 1024).toFixed(2)
@@ -22,6 +24,97 @@ passportInput.addEventListener("change", (e) => {
     };
   }
 });
+
+
+// Select Logics
+
+let courseDetailsContainer = document.querySelector(".course-details-container");
+let courseDetails = document.querySelector(".course-details");
+let popOverlay = document.querySelector(".pop-overlay");
+const courseOptions = document.querySelector("#courses")
+const detailsBtn = document.querySelector(".show-details")
+const topics = document.querySelector(".topics")
+const closeBtn = document.querySelector(".close-btn")
+
+
+courseOptions.addEventListener("change", (e) => {
+  submitBtn.classList.add("hide")
+  let value = e.target.value
+  let { title, requirements, topics, participants, price } = courseArray.filter(c => c.title == value)[0]
+  cost = price
+
+  switch (value) {
+    case value:
+      populateDetails(title, participants, requirements, topics, price)
+      break;
+    default:
+      break;
+  }
+})
+
+const populateDetails = (course, participants, listArray, topics, cost) => {
+  detailsBtn.style.display = "block"
+  courseDetails.innerHTML = displayCourseDetails(course, participants, listArray, topics, cost)
+}
+const displayCourseDetails = (course, participants, listArray, topics, cost) => {
+  let list = listArray.map(li => {
+    return `<li>${li}</li>`
+  }).join("")
+
+  let topic = topics.map(li => {
+    return `<li>${li}</li>`
+  }).join("")
+
+  let participant = participants.map(li => {
+    return `<li>${li}</li>`
+  }).join("")
+
+  return `
+        <div class="main">
+            <div class="requirements">
+            <h2> ${course}</h2>
+
+              <div>
+              <br>
+              <h3> Target Audience. </h3>
+              <ul>
+             ${participant}
+              </ul>
+               </div>
+            <br>
+                <h3>Basic Requirments.</h3>
+
+                <ul class="list">
+                ${list}
+            </ul>
+          </div>
+          <div class="topics">
+                <h3>What you will learn</h3>
+                <ul>
+                ${topic}
+                </ul class="list">
+                <h2 class="cost">Costs: &#8358;${cost}</h2>
+                <button class="btn btn-success" onclick="hidePopUp()">Continue</button>
+
+          </div>
+      </div>
+  `
+}
+detailsBtn.addEventListener("click", () => {
+  submitBtn.classList.add("hide")
+  popOverlay.style.display = "block"
+  courseDetailsContainer.classList.add("top")
+})
+closeBtn.addEventListener("click", () => {
+  popOverlay.style.display = "none"
+  courseDetailsContainer.classList.remove("top")
+})
+const hidePopUp = () => {
+  popOverlay.style.display = "none"
+  courseDetailsContainer.classList.remove("top")
+  submitBtn.classList.remove("hide")
+
+}
 
 const formInputs = Array.from(document.querySelectorAll("form .input"));
 let errorEles = Array.from(document.querySelectorAll(".error"));
@@ -159,9 +252,10 @@ form.addEventListener("submit", (e) => {
         });
 
         let user = {
-          ...data, password2: confirmpassword.value, course: course.value, passport
+          ...data, password2: confirmpassword.value, course: course.value, cost, passport
 
         }
+        console.log(user)
         // Post Data Using Fetch Api
         fetch('https://ocawebtech.herokuapp.com/', {
           method: 'post',
@@ -205,99 +299,43 @@ form.addEventListener("submit", (e) => {
 });
 
 
-// Select Logics
 
-let courseDetailsContainer = document.querySelector(".course-details-container");
-let courseDetails = document.querySelector(".course-details");
-let popOverlay = document.querySelector(".pop-overlay");
-const courseOptions = document.querySelector("#courses")
-const detailsBtn = document.querySelector(".show-details")
-const topics = document.querySelector(".topics")
-const closeBtn = document.querySelector(".close-btn")
+// Color the Title
 
-
-courseOptions.addEventListener("change", (e) => {
-  submitBtn.classList.add("hide")
-  let value = e.target.value
-  let { title, requirements, topics, participants, price } = courseArray.filter(c => c.title == value)[0]
-
-
-  switch (value) {
-    case value:
-      populateDetails(title, participants, requirements, topics, price)
-      break;
-    default:
-      break;
-  }
-})
-
-
-
-
-
-const populateDetails = (course, participants, listArray, topics, cost) => {
-  detailsBtn.style.display = "block"
-  courseDetails.innerHTML = displayCourseDetails(course, participants, listArray, topics, cost)
+function toHex(value) {
+  var hex = "0123465789ABCDEF";
+  var result = hex.charAt(Math.floor(value / 16));
+  result += hex.charAt(value % 16);
+  return result;
 }
-const displayCourseDetails = (course, participants, listArray, topics, cost) => {
-  let list = listArray.map(li => {
-    return `<li>${li}</li>`
-  }).join("")
-
-  let topic = topics.map(li => {
-    return `<li>${li}</li>`
-  }).join("")
-
-  let participant = participants.map(li => {
-    return `<li>${li}</li>`
-  }).join("")
-
-  return `
-        <div class="main">
-            <div class="requirements">
-            <h2> ${course}</h2>
-
-              <div>
-              <br>
-              <h3> Target Audience. </h3>
-              <ul>
-             ${participant}
-              </ul>
-               </div>
-            <br>
-                <h3>Basic Requirments.</h3>
-
-                <ul class="list">
-                ${list}
-            </ul>
-          </div>
-          <div class="topics">
-                <h3>What you will learn</h3>
-                <ul>
-                ${topic}
-                </ul class="list">
-                <h2 class="cost">Costs: &#8358;${cost}</h2>
-                <button class="btn btn-success" onclick="hidePopUp()">Continue</button>
-
-          </div>
-      </div>
-  `
+var colorBegin = "#DC143C";
+var colorEnd = "#3CB371";
+var text = "Oca WebTech";
+var r = parseInt(colorBegin.substring(1, 3), 16);
+var g = parseInt(colorBegin.substring(3, 5), 16);
+var b = parseInt(colorBegin.substring(5, 7), 16);
+var rr = parseInt(colorEnd.substring(1, 3), 16);
+var gg = parseInt(colorEnd.substring(3, 5), 16);
+var bb = parseInt(colorEnd.substring(5, 7), 16);
+var r_step = (rr - r) / text.length;
+var g_step = (gg - g) / text.length;
+var b_step = (bb - b) / text.length;
+var html = "";
+for (var x = 0; x <= text.length; x++) {
+  html =
+    html +
+    '<span style="color:#' +
+    toHex(r) +
+    toHex(g) +
+    toHex(b) +
+    '";">' +
+    text.charAt(x) +
+    "</span>";
+  r += r_step;
+  g += g_step;
+  b += b_step;
 }
-detailsBtn.addEventListener("click", () => {
-  submitBtn.classList.add("hide")
-  popOverlay.style.display = "block"
-  courseDetailsContainer.classList.add("top")
-})
-closeBtn.addEventListener("click", () => {
-  popOverlay.style.display = "none"
-  courseDetailsContainer.classList.remove("top")
-})
-const hidePopUp = () => {
-  popOverlay.style.display = "none"
-  courseDetailsContainer.classList.remove("top")
-  submitBtn.classList.remove("hide")
-
-}
+document.getElementById("title").innerHTML = html;
 
 
 

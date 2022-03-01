@@ -16,7 +16,7 @@
 
                 <div class="header">
                     <a href="./index.html"><img src="./images/logo.png" class="logo" alt="Logo"></a>
-                    <h2 class="title">Oca Web Technology</h2>
+                    <h2 class="title" id="title">Oca WebTech</h2>
                 </div>
                 <!-- onsubmit="validateForm()"  -->
                 <form class="form" method="POST" onsubmit="return validateForm()" autocomplete="off">
@@ -35,10 +35,13 @@
                     </div>
 
                     <!-- Select Course -->
-                     <div>
+                    <div>
                         <label for="courses">Choose What you want to Learn:</label>
                         <select id="courses" name="course">
                             <option selected disabled value="">Select</option>
+                            <option value="Jamb CBT Practice">JAMB CBT PRACTICE</option>
+                            <option value="JAMB CBT Practice & Computer Training">JAMB CBT Practice & Computer Training
+                            </option>
                             <option value="Certificate In  Computer Application">Certificate in Computer Application
                             </option>
                             <option value="Word Processing(Ms Word)">Word processing(Ms Word)</option>
@@ -87,12 +90,7 @@
                             maxlength="15">
                     </div>
 
-                    <!-- <div>
-                        <label for="username">User Name:</label>
-                        <small id="username-error" class="error"></small>
-                        <input class="input" id="username" type="text" name="username" placeholder="johndoe"
-                            maxlength="15">
-                    </div> -->
+
 
                     <div>
                         <label for="email">Email:</label>
@@ -115,34 +113,22 @@
                         <input id="password-confirm" type="password" name="confirmpassword" maxlength="30"
                             placeholder="*****">
                     </div>
-                   
+
                     <button class="btn btn-success submitbtn hide" type="submit" style="border: 0px;"> Apply </button>
 
                     <div class="indicator"></div>
                 </form>
                 <h4 class="form-link">Have Account? <a href="/login.html">Log In</a></h4>
                 <!-- Show Course Details -->
-                        <div class="pop-overlay"></div>
-                    <div class="course-details-container">
-                        <button class="close-btn btn btn-danger">Close</button>
-                            <div class="main course-details">
+                <div class="pop-overlay"></div>
+                <div class="course-details-container">
+                    <button class="close-btn btn btn-danger">Close</button>
+                    <div class="main course-details">
 
-                            </div>
-                        <!-- <div class="">
-                            <div class="requirements">
-
-                            </div>
-                        <div class="topics">
-
-                        <h2>What you will learn</h2>
-                        <ul>
-                        <li>Lorem ilisum dolor sit amet consectetur adiliisicing elit. Quidem, iste!</li>
-                        </ul>
-                        </div>
-
-                        </div> -->
                     </div>
-                
+
+                </div>
+
             </div>
 
             <!-- Display After Registration -->
