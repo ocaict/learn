@@ -3,7 +3,7 @@ const userContainer = document.querySelector(".user-container")
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
-import {getAuth, isSignInWithEmailLink, signInWithEmailLink } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"
+import { getAuth, isSignInWithEmailLink, signInWithEmailLink } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -35,55 +35,55 @@ if (isSignInWithEmailLink(auth, window.location.href)) {
   if (!email) {
     // User opened the link on a different device. To prevent session fixation
     // attacks, ask the user to provide the associated email again. For example:
-    if(!window.localStorage.getItem('verified')){
-        email = window.prompt('Please provide your email for confirmation');
-    }else{
-        userContainer.innerHTML = `<p class="">Email Verified, Pls Login to view your details </p>`
+    if (!window.localStorage.getItem('verified')) {
+      email = window.prompt('Please provide your email for confirmation');
+    } else {
+      userContainer.innerHTML = `<p class="">Email Verified, Pls Login to view your details </p>`
 
     }
   }
   // The client SDK will parse the code from the link for you.
-signInWithEmailLink(auth, email, window.location.href)
+  signInWithEmailLink(auth, email, window.location.href)
     .then((result) => {
       // Clear email from storage.
-    //   window.localStorage.removeItem('ocaSignUpEmail');
+      //   window.localStorage.removeItem('ocaSignUpEmail');
       console.log(result.user)
-        if(result.user){
-            let verifiedEmail = result.user.reloadUserInfo.email
-            let verified = result.user.reloadUserInfo.emailVerified
-            fetch("https://ocawebtech.herokuapp.com/students")
-            .then(data => data.json())
-            .then(users => {
-                console.log(users)
-                let verifiedUser = users.filter(user => user.email == verifiedEmail)
-                console.log(verifiedUser)
-                if(verifiedUser.length > 0){
-                    fetch("https://ocawebtech.herokuapp.com/verify", {
-                        method: "put",
-                        headers: {
-                            'Accept': 'application/json, text/plain, */*',
-                            'Content-Type': 'application/json'
-                          },
-                          body: JSON.stringify({id:verifiedUser[0].id})
-                    })
-                    .then(data => data.json())
-                    .then(res => {
-                        if(res.success){
-                            displayUserDetails(verifiedUser[0])
-                        window.localStorage.removeItem('userEmail');
-                        window.localStorage.setItem('verified', true);
+      if (result.user) {
+        let verifiedEmail = result.user.reloadUserInfo.email
+        let verified = result.user.reloadUserInfo.emailVerified
+        fetch("https://ocawebtech.herokuapp.com/students")
+          .then(data => data.json())
+          .then(users => {
+            console.log(users)
+            let verifiedUser = users.filter(user => user.email == verifiedEmail)
+            console.log(verifiedUser)
+            if (verifiedUser.length > 0) {
+              fetch("https://ocawebtech.herokuapp.com/verify", {
+                method: "put",
+                headers: {
+                  'Accept': 'application/json, text/plain, */*',
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id: verifiedUser[0].id })
+              })
+                .then(data => data.json())
+                .then(res => {
+                  if (res.success) {
+                    displayUserDetails(verifiedUser[0])
+                    window.localStorage.removeItem('userEmail');
+                    window.localStorage.setItem('verified', true);
 
 
-                        }else{
-                            userContainer.innerHTML = `<p class="error">Unable to Verify your email, Pls Try verify link again </p>`
-                        }
-                    })
-                    .catch(error => console.log(error))
-                }
-            })
-            .catch(err => console.log(err))
-        }
-       
+                  } else {
+                    userContainer.innerHTML = `<p class="error">Unable to Verify your email, Pls Try verify link again </p>`
+                  }
+                })
+                .catch(error => console.log(error))
+            }
+          })
+          .catch(err => console.log(err))
+      }
+
       // You can access the new user via result.user
       // Additional user info profile not available via:
       // result.additionalUserInfo.profile == null
@@ -91,7 +91,7 @@ signInWithEmailLink(auth, email, window.location.href)
       // result.additionalUserInfo.isNewUser
     })
     .catch((error) => {
-        console.log(error)
+      console.log(error)
       // Some error occurred, you can inspect the code: error.code
       // Common errors could be invalid email and invalid or expired OTPs.
     });
@@ -99,12 +99,12 @@ signInWithEmailLink(auth, email, window.location.href)
 
 
 const displayUserDetails = (user) => {
-let html = `<div class="card">
+  let html = `<div class="card">
 <img src="${user.passport}" alt="">
-<p> Hi ${user.firstname}, your email <span class="email">${user.email}</span> have been verified succecceffully.</p>
-<p>You can head to Oca Business Center & Computer Training Academy to complete your registration process.</p>
+<p> Hi ${user.firstname}, your email <span class="email">${user.email}</span> have been verified successffully.</p>
+<p>You can head to Oca  Computer Training Academy to pay and complete your registration process.</p>
 
 </div>
 `
-userContainer.innerHTML = html
+  userContainer.innerHTML = html
 }
