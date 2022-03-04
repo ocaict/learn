@@ -47,21 +47,21 @@ const courseArray = [
         requirements: ["Basic of Computer", "Typing Skill"],
         topics: ["Learn How to create publication (books, brochure, magazine, newspaper, etc)", "Learn industrial standard application"],
         participants: ["Anyone who want to master and craete professional publications", "Authors", "Writers", "Journalists"],
-        price: "15000"
+        price: "10000"
     },
     {
         title: "Database Management Systenm (MS Access)",
         requirements: ["Basic of Computer", "Typing Skill"],
         topics: ["Learn How to craete RBMS with MS Access", "Form Design", "Query", "Inroduction to SQL", ""],
         participants: ["Anyone who want master Database Design with MS Access", "students, teachers", "School Proprietors", "Business Owners"],
-        price: "20,000"
+        price: "15000"
     },
     {
         title: "CorelDraw Graphic Design",
         requirements: ["Basic of Computer", "Typing Skill"],
         topics: ["Master the art of  Graphic Design for Publication, web,  etc with CorelDraw", "Learn Logo Dseign", "Bill Board"],
         participants: ["Anyone who want master Graphic Desin with CorelDraw", "students, teachers", "School Proprietors", "Business Owners", "and More..."],
-        price: "12000"
+        price: "10000"
     },
 
     {
@@ -77,35 +77,35 @@ const courseArray = [
         requirements: ["Computer Operation", "Typing Skill", "Basics of Graphic Design", "Computer with Internet Access"],
         topics: ["Introduction to CMS", "Set up Development Environment", "Download & Installation of WordPress"],
         participants: ["Anyone who want design professional websites of all kinds without writing a code", "Anyone who want to becomer web designer", "Wed Designer who want to learn new techniques", "Students and Teachers", "School Proprietors", "Business Owners", "and More..."],
-        price: "35000"
+        price: "20000"
     },
     {
         title: "Moodle LMS",
         requirements: ["Basics of Computer", "Typing Skill", "Basics of Graphic Design", "Computer with Internet Access"],
         topics: ["Introduction to LMS", "Set up Development Environment", "Download & Installation of Moodle"],
         participants: ["Anyone who want create professional couress, reporting system, etc with moodle LMS", "Students & Teachers", "School Proprietors", "Entrepreneurs", "Business Owners"],
-        price: "35000"
+        price: "25000"
     },
     {
         title: "Web Development (HTML, CSS & JavaScript)",
         requirements: ["Basics of Computer", "Typing Skill", "Basics of Graphic Design", "Computer with Internet Access"],
         topics: ["Introduction to Web Developmet", "Set up Development Environment", "Download & Installation of Software", "Learn Everything you need to know about the structure of website", "Apply styling to create intuitive appearance with CSS ", "Learn how to make website dynamic with Javascript", "introduction to Ajax JSON"],
         participants: ["Anyone who want develop professional website from scratch using HTML, CSS & JavaScript", "Anyone who want to learn new skill of Front End Development", "students and Teachers", "School Proprietors", "Business Owners", "industries"],
-        price: "45000"
+        price: "30000"
     },
     {
         title: "CSS Library (BootStrap)",
         requirements: ["HTML, CSS, JS", "Basics of Graphic Design", "Computer with Internet Access"],
         topics: ["Learn BootStrap CSS Library", "Set up Development Environment", "Download & Installation of Software"],
         participants: ["Front End web developer who want to learn BootStrap"],
-        price: "15000"
+        price: "10000"
     },
     {
         title: "Modern JavaScript (ES6+)",
         requirements: ["HTML, CSS, JS", "Basics of Graphic Design", "Computer with Internet Access"],
         topics: ["Learn Modern Javascript ES6+", "Set up Development Environment", "Download & Installation of Software"],
         participants: ["Front End web developer who want to learn advance JS ES6+"],
-        price: "30000"
+        price: "20000"
     },
     {
         title: "jQuery",
@@ -119,35 +119,35 @@ const courseArray = [
         requirements: ["HTML, CSS, JS", "Basics of Graphic Design", "Computer with Internet Access"],
         topics: ["Learn NodeJs and Express Framework"],
         participants: ["Front End web developer who want to learn server side programming with Node Js and Express and Other frameworks"],
-        price: "40000"
+        price: "30000"
     },
     {
         title: "PHP",
         requirements: ["HTML, CSS, JS", "Basics of Graphic Design", "Computer with Internet Access"],
         topics: ["Learn PHP Server Programming"],
         participants: ["Front End web developer who want to learn server side programming with PHP"],
-        price: "40000"
+        price: "30000"
     },
     {
         title: "SQL/MYSQL/SQLITE",
         requirements: ["Back-End Development", "Computer with Internet Access"],
         topics: ["Learn Relational Database Managenment System"],
         participants: ["Front End and Back End developer who want to learn server side Database integration with RBMS"],
-        price: "35000"
+        price: "25000"
     },
     {
         title: "Mongodb/Firebase Firestore",
         requirements: ["Back-End Development", "Computer with Internet Access"],
         topics: ["Learn Non Relational Database Managenment System ", "Learn MongoDB and Integration"],
         participants: ["Front End and Back End developer who want to learn server side Database integration with No SQL Database"],
-        price: "30000"
+        price: "20000"
     },
     {
         title: "React JS",
         requirements: ["HTML, CSS and JS esp es6+", "Computer with Internet Access"],
         topics: ["Learn Front End Development React JS"],
         participants: ["Front End and Back End developer who want to website and web app with React JS"],
-        price: "30000"
+        price: "25000"
     },
     {
         title: "React Native",
