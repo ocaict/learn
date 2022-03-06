@@ -31,30 +31,25 @@ if (isSignInWithEmailLink(auth, window.location.href)) {
   // the sign-in operation.
   // Get the email if available. This should be available if the user completes
   // the flow on the same device where they started it.
-  let email = window.localStorage.getItem('userEmail');
+  let email = window.localStorage.getItem('userEmail') || "";
   if (!email) {
     // User opened the link on a different device. To prevent session fixation
     // attacks, ask the user to provide the associated email again. For example:
-    if (!window.localStorage.getItem('verified')) {
-      email = window.prompt('Please provide your email for confirmation');
-    } else {
-      userContainer.innerHTML = `<p class="">Email Verified, Pls Login to view your details </p>`
+    email = window.prompt('Please provide your email for confirmation');
 
-    }
   }
   // The client SDK will parse the code from the link for you.
   signInWithEmailLink(auth, email, window.location.href)
     .then((result) => {
       // Clear email from storage.
       //   window.localStorage.removeItem('ocaSignUpEmail');
-      console.log(result.user)
+
       if (result.user) {
         let verifiedEmail = result.user.reloadUserInfo.email
         let verified = result.user.reloadUserInfo.emailVerified
         fetch("https://ocawebtech.herokuapp.com/students")
           .then(data => data.json())
           .then(users => {
-            console.log(users)
             let verifiedUser = users.filter(user => user.email == verifiedEmail)
             console.log(verifiedUser)
             if (verifiedUser.length > 0) {
@@ -71,9 +66,6 @@ if (isSignInWithEmailLink(auth, window.location.href)) {
                   if (res.success) {
                     displayUserDetails(verifiedUser[0])
                     window.localStorage.removeItem('userEmail');
-                    window.localStorage.setItem('verified', true);
-
-
                   } else {
                     userContainer.innerHTML = `<p class="error">Unable to Verify your email, Pls Try verify link again </p>`
                   }
