@@ -71,14 +71,3 @@ function typeWriterDeluxe() {
 }
 typeWriterDeluxe();
 
-function sendMail() {
-  Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "ocaictcentre@gmail.com",
-    Password: "1F2D5883E3ABFBB5C2571E13EC6E15E91ACD",
-    To: "oluegwuc@gmail.com",
-    From: "ocaictcentre@gmail.com",
-    Subject: "This is the subject",
-    Body: "And this is the body",
-  }).then((message) => alert(message));
-}

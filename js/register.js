@@ -122,7 +122,10 @@ const form = document.querySelector(".form");
 const course = document.querySelector("#courses");
 const password = document.querySelector("#password");
 const confirmpassword = document.querySelector("#password-confirm");
-const submitBtn = document.querySelector(".submitbtn");
+const submitBtn = document.querySelector("#submitbtn");
+const submitBtnText = document.querySelector(".submit-form-btn");
+const loader = document.querySelector(".loader");
+
 
 let isValid = false;
 
@@ -244,7 +247,8 @@ form.addEventListener("submit", (e) => {
         courseError.innerHTML = "Select Course";
       } else {
         indicator.innerHTML = ""
-        submitBtn.value = "Proccessing.., Pls Wait";
+        submitBtnText.innerHTML = "Proccessing..";
+        loader.classList.remove("hide")
         submitBtn.disabled = true
         let data = {};
         mainInputs.forEach((input) => {
@@ -257,7 +261,9 @@ form.addEventListener("submit", (e) => {
         }
         console.log(user)
         // Post Data Using Fetch Api
-        fetch('https://ocawebtech.herokuapp.com/', {
+        const url = 'https://ocawebtech.herokuapp.com/'
+        const localUrl = "http://localhost:3600/"
+        fetch(url, {
           method: 'post',
           headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -271,7 +277,8 @@ form.addEventListener("submit", (e) => {
               console.log(res)
               indicator.innerHTML = res.msg
               submitBtn.disabled = false
-              submitBtn.value = "Apply";
+              submitBtnText.innerHTML = "Apply";
+              loader.classList.add("hide")
               clearInputs()
               userContainer.innerHTML = user.firstname
               formContainer.style.display = "none"
@@ -282,13 +289,15 @@ form.addEventListener("submit", (e) => {
             } else {
               indicator.innerHTML = res.msg
               submitBtn.disabled = false
-              submitBtn.value = "Apply";
+              loader.classList.add("hide")
+              submitBtnText.innerHTML = "Apply";
             }
           })
           .catch(err => {
             indicator.innerHTML = "Unable to proccess your request,  Pls Try Again"
             submitBtn.disabled = false
-            submitBtn.value = "Apply";
+            submitBtnText.innerHTML = "Apply";
+            loader.classList.add("hide")
             console.log(err)
           })
       }

@@ -1,7 +1,10 @@
 const form = document.querySelector("form")
 const formInputs = Array.from(document.querySelectorAll("form .input"));
 let indicator = document.querySelector(".indicator")
-let submitBtn = document.querySelector(".submitbtn")
+let submitBtnText = document.querySelector(".login-btn")
+let submitBtn = document.querySelector("#submit-btn")
+let loader = document.querySelector(".loader")
+
 
 form.onsubmit = (e) => {
   e.preventDefault()
@@ -9,16 +12,25 @@ form.onsubmit = (e) => {
 
   let user = {}
   formInputs.forEach(input => {
-    if (input.value == "") {
-      indicator.innerHTML = "Email or Password cannont be Blank"
-    } else {
-      user[input.name] = input.value
-    }
+    user[input.name] = input.value
   })
-  submitBtn.value = "Loging In... Pls Wait"
+
+  if (!user.email || !user.password) {
+    indicator.innerHTML = "Email or Password cannot be Blank"
+    return
+  }
+
+
+
+  submitBtnText.innerHTML = "Proccesssing..."
   submitBtn.disabled = true
+  loader.classList.remove("hide")
+
+
   // Post Data Using Fetch Api
-  fetch('https://ocawebtech.herokuapp.com/login', {
+  const url = 'https://ocawebtech.herokuapp.com/login'
+  const localUrl = "http://localhost:3600/login"
+  fetch(url, {
     method: 'post',
     headers: {
       'Accept': 'application/json, text/plain, */*',
@@ -34,14 +46,16 @@ form.onsubmit = (e) => {
         // indicator.innerHTML = res.msg
       } else {
         indicator.innerHTML = res.msg
-        submitBtn.value = "Login"
+        submitBtnText.innerHTML = "Login"
         submitBtn.disabled = false
+        loader.classList.add("hide")
       }
     })
     .catch(err => {
       indicator.innerHTML = "Unable to Connect to the Server"
-      submitBtn.value = "Login"
+      submitBtnText.innerHTML = "Login"
       submitBtn.disabled = false
+      loader.classList.add("hide")
       console.log(err)
     })
 
