@@ -274,7 +274,6 @@ form.addEventListener("submit", (e) => {
           .then(res => {
             if (res.success) {
               localStorage.setItem("userEmail", user.email)
-              console.log(res)
               indicator.innerHTML = res.msg
               submitBtn.disabled = false
               submitBtnText.innerHTML = "Apply";

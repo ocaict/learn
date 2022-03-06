@@ -45,7 +45,12 @@
   <div class="container">
     <div class="contact-container">
       <div class="user-container">
-        <p>Verifing your Email...., Pls Wait.</p>
+        <p>
+          <script>
+            let email = localStorage.getItem("userEmail") || ""
+            email ? "Verifing your Email...., Pls Wait." : "Email Already Verified"
+          </script>
+        </p>
       </div>
 
 
