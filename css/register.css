@@ -131,7 +131,8 @@ input::placeholder {
 }
 
 #password,
-#password-confirm {
+#password-confirm,
+#password2 {
   background-image: url(../images/password.png);
   background-repeat: no-repeat;
   background-size: 28px;
