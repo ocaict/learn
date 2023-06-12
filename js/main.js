@@ -368,7 +368,7 @@ footer {
     
     
       <footer class="copy-rigth">
-        <small>&COPY; 2021 - Oca Web Technology</small>
+        <small>&COPY; 2023 - Oca Web Technology</small>
       </footer>
 
 `;
